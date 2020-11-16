@@ -31,4 +31,4 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 | CWIKI.US 空间  | https://www.cwiki.us/display/DockerZH/Docker  |
 | Docker 官方文档 | https://docs.docker.com/ |
 | chinese_docker | https://github.com/widuu/chinese_docker |
-| daocloud.io | https://guide.daocloud.io/dcs/daocloud-services-9152632.html |
+| daocloud.io | http://guide.daocloud.io/#all-updates |
