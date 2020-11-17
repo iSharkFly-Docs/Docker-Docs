@@ -58,22 +58,16 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 
 ## 提供反馈
 
-We really want your feedback, and we've made it easy. You can edit a page or
-request changes in the right column of every page on
-[docs.docker.com](https://docs.docker.com/). You can also rate each page by
-clicking a link at the footer.
+Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，并且我们将这个提供反馈的方法进行了调整，以便于更好的进行访问和提交。
+你可以对页面进行编辑或者针对 [docs.docker.com](https://docs.docker.com/) 上每一个页面的右上角提供的链接来对内容进行编辑和提交合并请求。
 
-**Only file issues about the documentation in this repository.** One way
-to think about this is that you should file a bug here if your issue is that you
-don't see something that should be in the docs, or you see something incorrect
-or confusing in the docs.
+你也可以对每一个页面来进行评分，评分的链接在页面的页脚。
 
-- If your problem is a general question about how to configure or use Docker,
-  ask in [https://forums.docker.com](https://forums.docker.com) instead.
+**本仓库只针对文档的内容进行修改。** 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
 
-- If you have an idea for a new feature or behavior change in a specific aspect
-  of Docker, or have found a bug in part of Docker, file that issue in
-  the project's code repository.
+- 如果你在使用 Docker 的时候遇到了问题，请访问 https://forums.docker.com 论坛中的内容。
+
+- 如果针对 Docker 的新功能和特性有什么更好的建议或者你找到了 Docker 的一个 bug，请使用 Docker 的代码仓库来提交你的问题。
 
 ## 贡献
 
@@ -326,4 +320,6 @@ still optimizes the bandwidth during browsing).
 
 ## Copyright and license
 
-Copyright 2013-2020 Docker, inc, released under the Apache 2.0 license.
+Copyright 2013-2020 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
+
+中文版本的翻译和维护由 CWIKIUS 进行。我们允许在非商业的情况下自由扩散分发，并保留适当的权利。您可以对我们的作品进行演绎，但需要保留版权信息和来源。
