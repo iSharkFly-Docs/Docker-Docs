@@ -17,7 +17,7 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 | QQ 交流群 Spring | 15186112 |
 | 社区论坛 | [https://www.ossez.com/c/Toolkit-Algorithm-Computer-Science/system-and-container/25](https://www.ossez.com/c/Toolkit-Algorithm-Computer-Science/system-and-container/25) |
 
-### 微信及公众平台
+## 微信及公众平台
 我们建议您通过社区论坛来和我们进行沟通，请关注我们的微信公众号。
 
 ![](https://cdn.ossez.com/img/cwikius/cwikius-qr-wechat-search-w400.png)
@@ -37,37 +37,16 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 
 如果你发现这个文档有任何问题，Docker 官方欢迎你来创建 合并请求（Pull Requests）。Docker 的文档是完全开源的，Docker 官方也非常感谢社区对 Docker 的贡献。
 
-## 文档
-
-- [提供反馈](#提供反馈)
-- [Contributing](#contributing)
-  - [Files not edited here](#files-not-edited-here)
-  - [Overall doc improvements](#overall-doc-improvements)
-- [Per-PR staging on GitHub](#per-pr-staging-on-github)
-- [Build and preview the docs locally](#build-and-preview-the-docs-locally)
-  - [Build the docs with deployment features enabled](#build-the-docs-with-deployment-features-enabled)
-- [Important files](#important-files)
-- [Relative linking for GitHub viewing](#relative-linking-for-github-viewing)
-  - [Testing changes and practical guidance](#testing-changes-and-practical-guidance)
-  - [Per-page front-matter](#per-page-front-matter)
-  - [Creating tabs](#creating-tabs)
-  - [Running in-page Javascript](#running-in-page-javascript)
-  - [Images](#images)
-- [Copyright and license](#copyright-and-license)
-
-
 ## 提供反馈
 
-Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，并且我们将这个提供反馈的方法进行了调整，以便于更好的进行访问和提交。
-你可以对页面进行编辑或者针对 [docs.docker.com](https://docs.docker.com/) 上每一个页面的右上角提供的链接来对内容进行编辑和提交合并请求。
+Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，并且我们将这个提供反馈的方法进行了调整，以便于更好的进行访问和提交。你可以对页面进行编辑或者针对 https://docs.docker.com 上每一个页面的右上角提供的链接来对内容进行编辑和提交合并请求。
 
 你也可以对每一个页面来进行评分，评分的链接在页面的页脚。
 
-**本仓库只针对文档的内容进行修改。** 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
+*本仓库只针对文档的内容进行修改。* 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
 
-- 如果你在使用 Docker 的时候遇到了问题，请访问 https://forums.docker.com 论坛中的内容。
-
-- 如果针对 Docker 的新功能和特性有什么更好的建议或者你找到了 Docker 的一个 bug，请使用 Docker 的代码仓库来提交你的问题。
+* 如果你在使用 Docker 的时候遇到了问题，请访问 https://forums.docker.com 论坛中的内容。
+* 如果针对 Docker 的新功能和特性有什么更好的建议或者你找到了 Docker 的一个 bug，请使用 Docker 的代码仓库来提交你的问题。
 
 ## 贡献
 
