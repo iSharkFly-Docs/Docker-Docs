@@ -33,7 +33,7 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 | chinese_docker | https://github.com/widuu/chinese_docker |
 | daocloud.io | https://guide.daocloud.io/#all-updates |
 
-欢迎来到 Docker 文档的代码仓库。本代码仓库是文档 [https://docs.docker.com/](https://docs.docker.com/) 的源代码。
+欢迎来到 Docker 文档的代码仓库。本代码仓库是文档 https://docs.docker.com 的源代码。
 
 如果你发现这个文档有任何问题，Docker 官方欢迎你来创建 合并请求（Pull Requests）。Docker 的文档是完全开源的，Docker 官方也非常感谢社区对 Docker 的贡献。
 
@@ -43,41 +43,41 @@ Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，�
 
 你也可以对每一个页面来进行评分，评分的链接在页面的页脚。
 
-*本仓库只针对文档的内容进行修改。* 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
+**本仓库只针对文档的内容进行修改。** 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
 
 * 如果你在使用 Docker 的时候遇到了问题，请访问 https://forums.docker.com 论坛中的内容。
 * 如果针对 Docker 的新功能和特性有什么更好的建议或者你找到了 Docker 的一个 bug，请使用 Docker 的代码仓库来提交你的问题。
 
 ## 贡献
 
-We value your documentation contributions, and we want to make it as easy
-as possible to work in this repository. One of the first things to decide is
-which branch to base your work on. If you get confused, just ask and we will
-help. If a reviewer realizes you have based your work on the wrong branch, we'll
-let you know so that you can rebase it.
+我们非常重视你对文档的贡献，我们也希望能够尽可能的在文档仓库中间的的工作。
 
->**Note**: To contribute code to Docker projects, see the
-[Contribution guidelines](CONTRIBUTING.md).
+在你决定对文档进行贡献的时候，你需要首先确定你希望工作的分支。如果你在这个上面有什么困惑的话，你只需要向我们提问即可，官方和我们都会尽可能的帮助你。
 
-### Files not edited here
+如果官方的开放人员或者其他人发现了你可能提交了错误的分支，将会有人提醒你的，这个时候你只需要 rebase 你的工作就可以了。
 
-Files and directories listed in the `path:` keys in
-[`.NOT_EDITED_HERE.yaml`](.NOT_EDITED_HERE.yaml) are maintained in other
-repositories and should not be edited in this one. Pull requests against these
-files will be rejected. Make your edits to the files in the repository and path
-in the `source:` key in the YAML file.
+> **Note**: 希望对 Docker 的开发贡献你自己的力量？请参考下面文档的内容：[Contribution guidelines](CONTRIBUTING.md)。
+
+### 不需要在这里编辑的文件
+
+文件或者目录列在为 
+
+[`.NOT_EDITED_HERE.yaml`](.NOT_EDITED_HERE.yaml) 
+
+关键字的路径被其他仓库使用的是不应该进行编辑的。
+
+对上面字符串进行编辑后提交的 PR 请求会被驳回（rejected），请确定你编辑的仓库中的文件和路径是正确的。
 
 ### 文档改善计划概述
 
-Pull requests should be opened against the `master` branch, this includes:
+合并请求（PR）应该是针对 `master` 分支提出的，这个内容包括有：
 
-- Conceptual and task-based information not specific to new features
-- Restructuring / rewriting
-- Doc bug fixing
-- Typos and grammar errors
+* 不针对新特性的概念性的内容和基于任务的信息
+* 重新格式化或者重写部分内容
+* 文档错误的修改
+* 拼写或者语法错误
 
-> Do you enjoy creating graphics? Good graphics are key to great documentation,
-> and we especially value contributions in this area.
+> 你是否享受创建一些图形呢？好看漂亮的图形和设计是一个好文档的关键，我们尤其欢迎您在这个方面的贡献和帮助。
 
 ## 在 GitHub 上 PR 之前的 staging
 
