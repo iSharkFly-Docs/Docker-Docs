@@ -33,14 +33,13 @@ GitHub 上有关 CWIKIUS Docker 的项目的源代码文件：[https://github.co
 | chinese_docker | https://github.com/widuu/chinese_docker |
 | daocloud.io | https://guide.daocloud.io/#all-updates |
 
-Welcome to the repo for our documentation. This is the source for
-[https://docs.docker.com/](https://docs.docker.com/).
+欢迎来到 Docker 文档的代码仓库。本代码仓库是文档 [https://docs.docker.com/](https://docs.docker.com/) 的源代码。
 
-Feel free to send us pull requests and file issues. Our docs are completely	
-open source and we deeply appreciate contributions from our community!
-## Table of Contents
+如果你发现这个文档有任何问题，Docker 官方欢迎你来创建 合并请求（Pull Requests）。Docker 的文档是完全开源的，Docker 官方也非常感谢社区对 Docker 的贡献。
 
-- [Providing feedback](#providing-feedback)
+## 文档
+
+- [提供反馈](#提供反馈)
 - [Contributing](#contributing)
   - [Files not edited here](#files-not-edited-here)
   - [Overall doc improvements](#overall-doc-improvements)
@@ -57,7 +56,7 @@ open source and we deeply appreciate contributions from our community!
 - [Copyright and license](#copyright-and-license)
 
 
-## Providing feedback
+## 提供反馈
 
 We really want your feedback, and we've made it easy. You can edit a page or
 request changes in the right column of every page on
@@ -76,7 +75,7 @@ or confusing in the docs.
   of Docker, or have found a bug in part of Docker, file that issue in
   the project's code repository.
 
-## Contributing
+## 贡献
 
 We value your documentation contributions, and we want to make it as easy
 as possible to work in this repository. One of the first things to decide is
@@ -95,7 +94,7 @@ repositories and should not be edited in this one. Pull requests against these
 files will be rejected. Make your edits to the files in the repository and path
 in the `source:` key in the YAML file.
 
-### Overall doc improvements
+### 文档改善计划概述
 
 Pull requests should be opened against the `master` branch, this includes:
 
@@ -107,7 +106,7 @@ Pull requests should be opened against the `master` branch, this includes:
 > Do you enjoy creating graphics? Good graphics are key to great documentation,
 > and we especially value contributions in this area.
 
-## Per-PR staging on GitHub
+## 在 GitHub 上 PR 之前的 staging
 
 For every PR against `master`, a staged version of the site is built using Netlify.
 If the site builds, you will see **deploy/netlify — Deploy preview ready**.
@@ -116,7 +115,7 @@ the errors that prevented it from building. Review the staged site and amend you
 commit if necessary. Reviewers will also check the staged site before merging the
 PR, to protect the integrity of [https://docs.docker.com/](https://docs.docker.com/).
 
-## Build and preview the docs locally
+## 在本地构建和查看文档
 
 On your local machine, clone this repo:
 
@@ -208,7 +207,7 @@ The following examples use the `latest` tag:
 Either way, you can now access the docs at port 4000 on your Docker host.
 -->
 
-## Important files
+## 重要的文件
 
 - `/_data/toc.yaml` defines the left-hand navigation for the docs
 - `/js/docs.js` defines most of the docs-specific JS such as TOC generation and menu syncing
