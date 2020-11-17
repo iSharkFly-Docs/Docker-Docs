@@ -79,14 +79,15 @@ Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，�
 
 > 你是否享受创建一些图形呢？好看漂亮的图形和设计是一个好文档的关键，我们尤其欢迎您在这个方面的贡献和帮助。
 
-## 在 GitHub 上 PR 之前的 staging
+## GitHub 提交 合并请求（PR） 之前的预存（staging ）
 
-For every PR against `master`, a staged version of the site is built using Netlify.
-If the site builds, you will see **deploy/netlify — Deploy preview ready**.
-Otherwise, you will see an error. Click **Details** to review the staged site or
-the errors that prevented it from building. Review the staged site and amend your
-commit if necessary. Reviewers will also check the staged site before merging the
-PR, to protect the integrity of [https://docs.docker.com/](https://docs.docker.com/).
+针对提交到 `master` 分支的每一次合并请求，一个针对站点使用 Netlify 的预存 staging 将会被创建。
+
+如果站点被重构创建，将会看到 **deploy/netlify — Deploy preview ready**** 文字。
+
+否则的话，你将会看到一个错误信息，单击 **Details** 来查看暂存的站点或者阻止站点重构的错误。重新查看暂存的站点来确定是不是你提交的内容导致的错误。
+
+在 PR 合并到 master 分支之前，其他的项目相关人员同时也会查看暂存的站点。通过这个选项，我们来保护 https://docs.docker.com 站点不会有错误。
 
 ## 在本地构建和查看文档
 
