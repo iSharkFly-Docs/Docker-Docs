@@ -47,35 +47,28 @@ $ sudo yum remove docker \
 
 Docker 引擎（Docker Engine）的包，当前被修改称为 `docker-ce`。
 
-## Installation methods
+## 安装方法
 
-You can install Docker Engine in different ways, depending on your needs:
+基于你的需求，你可以使用不同的方法安装 Docker 引擎（Docker Engine）：
 
-- Most users
-  [set up Docker's repositories](#install-using-the-repository) and install
-  from them, for ease of installation and upgrade tasks. This is the
-  recommended approach.
+- 绝大部分用户使用
+  [设置 Docker 的仓库](#install-using-the-repository) ，然后从设置成功后的仓库进行安装。为了更加容易进行安装和升级任务，Docker 的官方推荐使用这种安装方式来进行安装。
 
-- Some users download the RPM package and
-  [install it manually](#install-from-a-package) and manage
-  upgrades completely manually. This is useful in situations such as installing
-  Docker on air-gapped systems with no access to the internet.
+- 一些用户可以使用下载的 RPM 包 ，然后
+  [手动进行安装](#install-from-a-package) 然后你需要手动来进行升级。这种方法主要针对一些系统不具有联网环境，你需要下载后进行安装。
 
-- In testing and development environments, some users choose to use automated
-  [convenience scripts](#install-using-the-convenience-script) to install Docker.
+- 在一些测试和部署环境中，一些用户采用自动化脚本来安装 Docker，请访问链接：
+  [自动化安装脚本](#install-using-the-convenience-script) 来了解更多。
 
-### Install using the repository
+### 使用仓库进行安装
 
-Before you install Docker Engine for the first time on a new host machine, you need
-to set up the Docker repository. Afterward, you can install and update Docker
-from the repository.
+在你对新安装的机器安装 Docker 之前，你需要设置 Docker 仓库。当仓库设置好以后，你可以从设置的仓库中对 Docker 进行安装和更新。
 
 #### Set up the repository
 
 {% assign download-url-base = "https://download.docker.com/linux/centos" %}
 
-Install the `yum-utils` package (which provides the `yum-config-manager`
-utility) and set up the **stable** repository.
+安装  `yum-utils` 包（这个安装包将会提供 `yum-config-manager` 工具）然后设置 **稳定（stable**）的仓库。
 
 ```bash
 $ sudo yum install -y yum-utils
@@ -85,57 +78,49 @@ $ sudo yum-config-manager \
     {{ download-url-base }}/docker-ce.repo
 ```
 
-> **Optional**: Enable the **nightly** or **test** repositories.
+> **可选的**：启用 **晚间构建（nightly）** 或 **测试（test）** 仓库。
 >
-> These repositories are included in the `docker.repo` file above but are disabled
-> by default. You can enable them alongside the stable repository.  The following
-> command enables the **nightly** repository.
+> 上面的这些仓库包含有  `docker.repo` 文件，但是在默认情况下是禁用的。你可以和稳定版本仓库地址一样来启用它们。下面的内容显示的是启用 **晚间构建（nightly）**仓库的命令。
 >
 > ```bash
 > $ sudo yum-config-manager --enable docker-ce-nightly
 > ```
 >
-> To enable the **test** channel, run the following command:
+> 希望启用 **测试（test）**仓库，请使用下面的命令：
 >
 > ```bash
 > $ sudo yum-config-manager --enable docker-ce-test
 > ```
 >
-> You can disable the **nightly** or **test** repository by running the
-> `yum-config-manager` command with the `--disable` flag. To re-enable it, use
-> the `--enable` flag. The following command disables the **nightly** repository.
+> 你可以通过运行 `yum-config-manager` 命令，并在命令后面添加  `--disable` 标记来禁用 **晚间构建（nightly）** 或 **测试（test）**仓库。
+> 下面的命令是表示禁用 **晚间构建（nightly）**仓库：
 >
 > ```bash
 > $ sudo yum-config-manager --disable docker-ce-nightly
 > ```
 >
-> [Learn about **nightly** and **test** channels](index.md).
+> [了解更多有关**晚间构建（nightly）** 和 **测试（test）**的通道](index.md)。
 
-#### Install Docker Engine
+#### 安装 Docker 引擎
 
-1.  Install the _latest version_ of Docker Engine and containerd, or go to the next step to install a specific version:
+1.  安装*最新版本*的 Docker 引擎和容器，或者使用后续的步骤来为安装的指定特定的版本：
 
     ```bash
     $ sudo yum install docker-ce docker-ce-cli containerd.io
     ```
 
-    If prompted to accept the GPG key, verify that the fingerprint matches
-    `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, and if so, accept it.
+    如果按照的时候提示需要校验 GPG Key，请确定指纹与字符串 `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35` 是吻合的，然后选择接受。
 
-    > Got multiple Docker repositories?
+    > 获得了多个 Docker 的仓库？
     >
-    > If you have multiple Docker repositories enabled, installing
-    > or updating without specifying a version in the `yum install` or
-    > `yum update` command always installs the highest possible version,
-    > which may not be appropriate for your stability needs.
+    > 如果你有多个 Docker 仓库被启用了，在使用  `yum install` 或 `yum update` 命令对 Docker 进行安装和升级的时候，如果你没有指定版本，
+    > 那么上面的命令将会尝试使用最新的版本进行安装。这有可能导致安装的版本不是你需要的。
 
-    Docker is installed but not started. The `docker` group is created, but no users are added to the group.
+    Docker 被安装了，但是没有启动。这是因为 `docker` 组已经被创建了，但是还没有用户添加到组中。
 
-2.  To install a _specific version_ of Docker Engine, list the available versions
-    in the repo, then select and install:
+2.  针对 Docker 的安装*指定版本*的 Docker 引擎（Docker Engine），列出给定仓库中可用的 Docker 版本，然后选择需要的版本来进行安装：
 
-    a. List and sort the versions available in your repo. This example sorts
-       results by version number, highest to lowest, and is truncated:
+    a. 分类列出你仓库中可用的 Docker 版本。下面的示例列出了通过版本好进行分类的结果，从高到低的分类：
 
     ```bash
     $ yum list docker-ce --showduplicates | sort -r
@@ -146,45 +131,38 @@ $ sudo yum-config-manager \
     docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable
     ```
 
-    The list returned depends on which repositories are enabled, and is specific
-    to your version of CentOS (indicated by the `.el7` suffix in this example).
+    上面的列表是基于你启用的仓库不同来指定你 CentOS 操作系统的版本（如上面所示，使用 `el7` 后缀来标记）。
 
-    b. Install a specific version by its fully qualified package name, which is
-       the package name (`docker-ce`) plus the version string (2nd column)
-       starting at the first colon (`:`), up to the first hyphen, separated by
-       a hyphen (`-`). For example, `docker-ce-18.09.1`.
+    b. 通过提供完整的包的名字来安装指定的版本的 Docke 引擎。完整的路径包括有包的名字（`docker-ce`）并且加上第二列提供的版本字符串。
+       从第一个冒号（`:`）后的字符开始计算，截止于分隔符（`-`）之前的字符。
+       例如： `docker-ce-18.09.1`。
 
     ```bash
     $ sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io
     ```
 
-    Docker is installed but not started. The `docker` group is created, but no users are added to the group.
+    Docker 被安装了，但是没有启动。这是因为 `docker` 组已经被创建了，但是还没有用户添加到组中。
 
-3.  Start Docker.
+3.  启动 Docker
 
     ```bash
     $ sudo systemctl start docker
     ```
 
-4.  Verify that Docker Engine is installed correctly by running the `hello-world`
-    image.
+4.  通过运行  `hello-world` 镜像（image）来确定 Docker 安装成功了。
 
     ```bash
     $ sudo docker run hello-world
     ```
 
-    This command downloads a test image and runs it in a container. When the
-    container runs, it prints an informational message and exits.
+    这个命令将会下载一个测试镜像并且在容器中运行。如果容器是运行的话，这个命令将会打印出一些信息后退出。
 
-Docker Engine is installed and running. You need to use `sudo` to run Docker
-commands. Continue to [Linux postinstall](linux-postinstall.md) to allow
-non-privileged users to run Docker commands and for other optional configuration
-steps.
+Docker 引擎已经安装并且运行了，你需要使用 `sudo` 来运行 Docker 的命令。请继续阅读页面 [Linux 安装 Docker 的后续步骤](linux-postinstall.md) 
+中的内容来允许你操作系统中没有权限的用户来允许 Docker 命令和其他的一些配置选项。
 
-#### Upgrade Docker Engine
+#### 升级 Docker 引擎
 
-To upgrade Docker Engine, follow the [installation instructions](#install-using-the-repository),
-choosing the new version you want to install.
+希望对 Docker 引擎进行申请，请按照 [使用仓库进行安装](#install-using-the-repository)，步骤，来选择你希望安装的新版本。
 
 ### Install from a package
 
