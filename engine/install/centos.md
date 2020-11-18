@@ -16,25 +16,21 @@ toc_max: 4
 [安装 Docker](#installation-methods) 
 页面中的内容。
 
-## Prerequisites
+## 安装要求
 
-### OS requirements
+### 操作系统（OS） 要求
 
-To install Docker Engine, you need a maintained version of CentOS 7. Archived
-versions aren't supported or tested.
+要在 CentOS 上安装 Docker，最低的操作系统版本需要为 CentOS 7。其他的早期版本不能够获得支持。
 
-The `centos-extras` repository must be enabled. This repository is enabled by
-default, but if you have disabled it, you need to
-[re-enable it](https://wiki.centos.org/AdditionalResources/Repositories){: target="_blank" rel="noopener" class="_" }.
+`centos-extras` 仓库需要被启用。这个仓库在默认情况下是启用的，但是可能因为其他的原因被关闭了，请参考 [重新启用 centos-extras 仓库](https://wiki.centos.org/AdditionalResources/Repositories) 页面中的内容。
 
-The `overlay2` storage driver is recommended.
+推荐使用 `overlay2` 存储驱动。
 
-### Uninstall old versions
+### 卸载老的版本
 
-Older versions of Docker were called `docker` or `docker-engine`. If these are
-installed, uninstall them, along with associated dependencies.
+老的 Docker 版本可能被称为  `docker` 或 `docker-engine`。如果这些老的 Docker 版本被安装的话，请首先进行卸载，同时也请卸载关联的依赖。
 
-```bash
+````bash
 $ sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
@@ -43,12 +39,13 @@ $ sudo yum remove docker \
                   docker-latest-logrotate \
                   docker-logrotate \
                   docker-engine
-```
+````
 
-It's OK if `yum` reports that none of these packages are installed.
+如果在使用 `yum` 的时候，提示没有任何上面的包被安装的话，也没有关系。你可以跳过这个卸载的过程。reports that none of these packages are installed.
 
-The contents of `/var/lib/docker/`, including images, containers, volumes, and
-networks, are preserved. The Docker Engine package is now called `docker-ce`.
+路径  `/var/lib/docker/` 下的内容包含有 镜像（images），容器（containers），卷（volumes），网络（networks）这些内容。这些内容是 Docker 容器运行需要的必要配置。
+
+Docker 引擎（Docker Engine）的包，当前被修改称为 `docker-ce`。
 
 ## Installation methods
 
