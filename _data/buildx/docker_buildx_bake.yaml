@@ -1,0 +1,97 @@
+command: docker buildx bake
+aliases: f
+short: Build from a file
+long: Build from a file
+usage: docker buildx bake [OPTIONS] [TARGET...]
+pname: docker buildx
+plink: docker_buildx.yaml
+options:
+- option: file
+  shorthand: f
+  value_type: stringArray
+  default_value: '[]'
+  description: Build definition file
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: load
+  value_type: bool
+  default_value: "false"
+  description: Shorthand for --set=*.output=type=docker
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: no-cache
+  value_type: bool
+  default_value: "false"
+  description: Do not use cache when building the image
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: print
+  value_type: bool
+  default_value: "false"
+  description: Print the options without building
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: progress
+  value_type: string
+  default_value: auto
+  description: |
+    Set type of progress output (auto, plain, tty). Use plain to show container output
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: pull
+  value_type: bool
+  default_value: "false"
+  description: Always attempt to pull a newer version of the image
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: push
+  value_type: bool
+  default_value: "false"
+  description: Shorthand for --set=*.output=type=registry
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+- option: set
+  value_type: stringArray
+  default_value: '[]'
+  description: 'Override target value (eg: targetpattern.key=value)'
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+inherited_options:
+- option: builder
+  value_type: string
+  description: Override the configured builder instance
+  deprecated: false
+  experimental: false
+  experimentalcli: false
+  kubernetes: false
+  swarm: false
+deprecated: false
+experimental: false
+experimentalcli: true
+kubernetes: false
+swarm: false
+
