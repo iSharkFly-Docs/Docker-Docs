@@ -1,0 +1,20 @@
+
+#TODO: work out how to add a data dir to any repo that has documentation
+# atm, repo's have a docs dir that is akin to the hugo content dir.
+
+
+# Define Advisory texts
+# can be used in page frontmatter, e.g.:
+#       advisory: experimental
+
+texts:
+  experimental: "The functionality described on this page is marked as Experimental, and as such, may change before it becomes generally available."
+  kitematic: "**Legacy desktop solution.** Kitematic is a legacy solution, bundled with [Docker Toolbox](/toolbox/overview/). We recommend updating to [Docker Desktop for Mac](/docker-for-mac/) or [Docker Desktop for Windows](/docker-for-windows/) if your system meets the requirements for one of those applications."
+
+
+# URL based advisories
+# any URL that begins with "/engine/" will get the "engine" advisory
+# will be over-ridden by the `advisory` frontmatter in the topic
+# [paths]
+# "/engine/" = "engine"
+# "/swarm/" = "swarm"
