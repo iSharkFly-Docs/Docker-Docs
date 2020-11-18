@@ -91,37 +91,34 @@ Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，�
 
 ## 在本地构建和查看文档
 
-On your local machine, clone this repo:
+在你的本地计算机上，克隆这个仓库：
 
 ```bash
-git clone --recursive https://github.com/docker/docker.github.io.git
-cd docker.github.io
+git clone --recursive https://github.com/cwiki-us-docs/docker-docs.git
+cd docker-docs
 ```
 
-Then build and run the documentation with [Docker Compose](https://docs.docker.com/compose/)
-
-```bash
-docker-compose up -d --build
-```
-
-> Docker Compose is included with [Docker Desktop](https://docs.docker.com/desktop/).
-> If you don't have Docker Compose installed, [follow these installation instructions](https://docs.docker.com/compose/install/).
-
-Once the container is built and running, visit [http://localhost:4000](http://localhost:4000)
-in your web browser to view the docs.
-
-To rebuild the docs after you made changes, run the `docker-compose up` command
-again. This rebuilds the documentation, and updates the container with your changes:
+然后使用 Docker Compose 来运行和构建这个文档，Docker Compose 的访问链接为：https://docs.docker.com/compose
 
 ```bash
 docker-compose up -d --build
 ```
 
-Once the container is built and running, visit [http://localhost:4000](http://localhost:4000)
-in your web browser to view the docs.
+> Docker Compose 包含有 [Docker Desktop](https://docs.docker.com/desktop)。
+> 如果你的计算机上没有安装 Docker Compose，请访问下面的链接上的参考来进行安装：https://docs.docker.com/compose/install/。
+
+一旦容器被构建和运行了，请通过浏览器来访问 [http://localhost:4000](http://localhost:4000]地址来查看构建成功的文档页面。
+
+当你对文档进行了新的修改后，你可以再次运行 *docker-compose up* 命令。这个命令将会重新构建文档，并且将你的容器进行更新。
+
+```bash
+docker-compose up -d --build
+```
+
+一旦容器被构建和运行了，请通过浏览器来访问 [http://localhost:4000](http://localhost:4000]地址来查看构建成功的文档页面。
 
 
-To stop the staging container, use the `docker-compose down` command:
+如果你想停止预存（staging）的容器，请使用  *docker-compose down* 命令
 
 ```bash
 docker-compose down
