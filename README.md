@@ -124,33 +124,28 @@ docker-compose up -d --build
 docker-compose down
 ```
 
-### Build the docs with deployment features enabled
+### 启用文档的部署特性
 
-The default configuration for local builds of the documentation disables some
-features to allow for a shorter build-time. The following options differ between
-local builds, and builds that are deployed to docs.docker.com:
+在默认的本地构建文档中，我们禁用了一些特性来缩短文档的构建时间。在针对 [docs.docker.com](https://docs.docker.com) 网站中部署的文档和本地构建的文档有下面的一些配置不同：
 
-- search auto-completion, and generation of `js/metadata.json`
-- google analytics
-- page ratings
-- `sitemap.xml` generation
-- minification of stylesheets (css/style.css)
-- adjusting "edit this page" links for content in other repositories
+- 使用 `js/metadata.json` 的自动搜索完成
+- google analytics 配置
+- 页面评分配置（page ratings）
+-  创建站点地图 `sitemap.xml`
+- 样式表的压缩和小型化（css/style.css）
+- 针对内容在其他仓库中的 "编辑页面（edit this page）" 页面的链接
 
-If you want to contribute in these areas, you can perform a "production" build
-locally.
+如果你对上面的内容进行了修改的话，你可以在你的本地使用 "服务器（Production）" 构建。
 
-To preview the documentation with deployment features enabled, you need to set the
-`JEKYLL_ENV` environment variable when building the documentation;
+为了能够预览针对服务器的部署环境的特性是否被启用了，你需要在对你的文档进行构建的时候设置 `JEKYLL_ENV` 环境变量。
 
 ```bash
 JEKYLL_ENV=production docker-compose up --build
 ```
 
-Once the container is built and running, visit [http://localhost:4000](http://localhost:4000)
-in your web browser to view the docs.
+当构建完成后，请访 [http://localhost:4000](http://localhost:4000) 地址中的内容来确定构建的正确。
 
-To rebuild the docs after you make changes, repeat the steps above.
+如果你对文档进行了修改，并且需要重新构建的话，你需要重复上面的步骤。
 
 <!--
 TODO re-enable auto-builds, or push master builds to Docker hub
