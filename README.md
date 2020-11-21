@@ -255,35 +255,30 @@ no_ratings: true
 
 ### 图片
 
-Don't forget to remove images that are no longer used. Keep the images sorted
-in the local `images/` directory, with names that naturally group related images
-together in alphabetical order. For instance prefer `settings-file-share.png`
-and `settings-proxies.png` to `file-share-settings.png` and
-`proxies-settings.png`. You may also use numbers, especially in the case of a
-sequence, e.g., `run-only-the-images-you-trust-1.svg`
-`run-only-the-images-you-trust-2.png` `run-only-the-images-you-trust-3.png`.
+不要忘记删除所有不需要的图片，将图片保存在 images/ 目录中，这个目录为通常我们保存图片的路径。
 
-When applicable, capture windows rather than rectangular regions. This
-eliminates unpleasant background and saves the editors the need to crop.
+通常的，这个文件夹中的图片文件是按照图片文件名的字母进行排和分组的。例如，相对命名方式来说 `settings-file-share.png` 和 `settings-proxies.png` 针对  `file-share-settings.png` 和 `proxies-settings.png` 来说就更好了。
 
-On Mac, capture windows without shadows. To this end, once you pressed
-`Command-Shift-4`, press Option while clicking on the window. To disable
-shadows once for all, run:
+你还可以添加数字，尤其你是针对图片有使用和显示顺序的情况下。例如，`run-only-the-images-you-trust-1.svg`，`run-only-the-images-you-trust-2.png`， `run-only-the-images-you-trust-3.png` 等。
+
+在可能的情况下，对需要的内容进行截图，并且避免对整个桌面进行截图，这样避免一些重要的配置信息被泄漏也能够为编辑节约不少的编辑时间。
+
+在 Mac 的计算机中，请对创建进行截图而且不要保存为阴影。你可以使用下面的方法进行操作：当你按下 `Command-Shift-4` 后，单击选项，来进行禁用 。
+
+如果你想全局进行禁用，请运行下面的脚本：
 
 ```bash
 $ defaults write com.apple.screencapture disable-shadow -bool TRUE
 $ killall SystemUIServer  # restart it.
 ```
 
-You can restore shadows later with `-bool FALSE`.
+在后面，你可以通过设置 `-bool FALSE` 来重新启用阴影。
 
-In order to keep the Git repository light, _please_ compress the images
-(losslessly). On Mac you may use (ImageOptim)[https://imageoptim.com] for
-instance. Be sure to compress the images *before* adding them to the
-repository, doing it afterwards actually worsens the impact on the Git repo (but
-still optimizes the bandwidth during browsing).
+为了保持我们的 Git 仓库不至于过大，请尽量对图片进压缩。在 Mac 的计算中，你也许可以使用 https://imageoptim.com 来对图片进行压缩。
 
-## Copyright and license
+请对图片进行压缩之后，才上传图片到 Git 的仓库中。如果你在这个之前操作的话，你可能还是增加了 Git 仓库的内容，但是针对网络传输方面的内容进行了优化。
+
+## 版权和许可证
 
 Copyright 2013-2020 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
 
