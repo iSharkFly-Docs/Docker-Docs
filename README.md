@@ -175,44 +175,38 @@ Either way, you can now access the docs at port 4000 on your Docker host.
 
 ## 重要的文件
 
-- `/_data/toc.yaml` defines the left-hand navigation for the docs
-- `/js/docs.js` defines most of the docs-specific JS such as TOC generation and menu syncing
-- `/css/style.scss` defines the docs-specific style rules
-- `/_layouts/docs.html` is the HTML template file, which defines the header and footer, and includes all the JS/CSS that serves the docs content
+- `/_data/toc.yaml` 定义了文档的左侧导航
+- `/js/docs.js` 定义了文档使用的主要 JS 文本，例如 TOC 创建，菜单同步等
+- `/css/style.scss` 定义了文档使用的主要样式表规则
+- `/_layouts/docs.html` 为 HTML 的模板文件，包括定义了 header 和 footer，同时也包括了所有文档内容需要使用的 JS/CSS
 
-## Relative linking for GitHub viewing
+## GitHub 查看的相关链接
 
-Feel free to link to `../foo.md` so that the docs are readable in GitHub, but keep in mind that Jekyll templating notation
-`{% such as this %}` will render in raw text and not be processed. In general it's best to assume the docs are being read
-directly on [https://docs.docker.com/](https://docs.docker.com/).
+你可以自由的链接到 `../foo.md` 文件，这样的话这个文本就可以在 GitHub 上进行阅读了，但是需要注意的是 Jekyll 模板将会通知templating notation
+`{% such as this %}` 将会被读成原始文档，而不会被处理。因此最好的办法就是访问官方 [https://docs.docker.com/](https://docs.docker.com/) 文档链接来进行阅读文档。
 
-### Testing changes and practical guidance
+### 测试修改和实践指南
 
-If you want to test a style change, or if you want to see how to achieve a
-particular outcome with Markdown, Bootstrap, JQuery, or something else, have
-a look at `test.md` (which renders in the site at `/test/`).
+如果你希望对修改的样式表进行测试，或者你希望对 Markdown， Bootstrap， JQuery 或者其他的一些内容进行测试的话，请参考 `test.md` 中的内容（访问路径为 `/test/`）。
 
-### Per-page front-matter
+### 预页面字体格式
 
-The front-matter of a given page is in a section at the top of the Markdown
-file that starts and ends with three hyphens. It includes YAML content. The
-following keys are supported. The title, description, and keywords are required.
+字体格式将会告诉页面在 Markdown 文件的最上端，使用 3 个横线作为开始和结束。其中包括有 YAML 内容，下面为可以支持的关键字，包括有表头，描述和关键字是否是必须的。
 
-| Key                    | Required  | Description                             |
+| 关键字                    | 是否必须  | 描述                             |
 |------------------------|-----------|-----------------------------------------|
-| title                  | yes       | The page title. This is added to the HTML output as a `<h1>` level header. |
-| description            | yes       | A sentence that describes the page contents. This is added to the HTML metadata. |
-| keywords               | yes       | A comma-separated list of keywords. These are added to the HTML metadata. |
-| redirect_from          | no        | A YAML list of pages which should redirect to THIS page. At build time, each page listed here is created as a HTML stub containing a 302 redirect to this page. |
-| notoc                  | no        | Either `true` or `false`. If `true`, no in-page TOC is generated for the HTML output of this page. Defaults to `false`. Appropriate for some landing pages that have no in-page headings.|
-| toc_min                | no        | Ignored if `notoc` is set to `true`. The minimum heading level included in the in-page TOC. Defaults to `2`, to show `<h2>` headings as the minimum. |
-| toc_max                | no        | Ignored if `notoc` is set to `false`. The maximum heading level included in the in-page TOC. Defaults to `3`, to show `<h3>` headings. Set to the same as `toc_min` to only show `toc_min` level of headings. |
-| no_ratings             | no        | Either `true` or `false`. Set to `true` to disable the page-ratings applet for this page. Defaults to `false`. |
-| skip_read_time         | no        | Set to `true` to disable the 'Estimated reading time' banner for this page. |
-| sitemap                | no        | Exclude the page from indexing by search engines. When set to `false`, the page is excluded from `sitemap.xml`, and a `<meta name="robots" content="noindex"/>` header is added to the page. |
+| title                  | 是       | 这个字段定义的是页面的标题，将会添加到 HTML 输出中的 `<h1>` 级别的头部。 |
+| description            | 是       | 一个描述页面内容的例子，将会添加到 HTML 的 metadata 上面。 |
+| keywords               | 是       | 一个使用逗号分隔符的关键字列表，将会添加到 HTML 的 metadata 上面。 |
+| redirect_from          | 否       | 一个 YAML 的列表，这个将会显示链接到当前页面的的所有页面列表。在页面处理的过程中，这个地方配置的页面内容，将会为那些页面创建一个 302 重定向链接到这个页面上。 |
+| notoc                  | 否       | 可以使用 `true` 或者 `false`。如果选择 `true` 的话， TOC 将不会在 HTML 输出的时候创建。默认的配置选项是 `false`。针对没有页面头部内容，将会创建相同的显示页面。|
+| toc_min                | 否       | 如果 `notoc` 设置为 `true` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最小的页面级别为。默认配置为 `2`， 意思是显示页面头部最小的开始为 `<h2>`。 |
+| toc_max                | 否       | 如果 `notoc` 设置为 `false` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最大的页面级别为。默认配置为 `3`， 意思是显示页面头部最小的开始为 `<h3>`。如果这个设置和 `toc_min` 相同的话，那么只有 `toc_min` 的级别标题被显示。 |
+| no_ratings             | 否       | 可以使用 `true` 或者 `false`。设置是否为页面设置投票，如果设置为 `true` 的话，页面将不会显示投票。默认为 `false`。 |
+| skip_read_time         | 否       | 设置 `true` 的话，将不会在页面中设置页面的估计阅读时间。 |
+| sitemap                | 否       | 通知这个页面将不会被搜索引擎进行索引，当设置为 `false` 的时候，这个页面将会从 `sitemap.xml` 中进行剔除，并且在页面的头部（header）将会添加 `<meta name="robots" content="noindex"/>` 这个内容。 |
 
-The following is an example of valid (but contrived) page metadata. The order of
-the metadata elements in the front-matter is not important.
+下面显示的内容是一个有效的页面 Metadata 配置（没有转换为 HTML）页面。在预页面格式中内容的顺序是没有关系的，你可以随意调整上面参数的顺序。
 
 ```liquid
 ---
@@ -230,13 +224,13 @@ no_ratings: true
 ---
 ```
 
-### Creating tabs
+### 创建标签（Tab）页
 
-The use of tabs, as on pages like [https://docs.docker.com/engine/api/](/engine/api/), requires
-the use of HTML. The tabs use Bootstrap CSS/JS, so refer to those docs for more
-advanced usage. For a basic horizontal tab set, copy/paste starting from this
-code and implement from there. Keep an eye on those `href="#id"` and `id="id"`
-references as you rename, add, and remove tabs.
+为了在页面中使用标签页，例如测试页面中的标签页：https://docker.ossez.com/test/，这个需要使用 HTML 文件。The use of tabs, as on pages like [https://docs.docker.com/engine/api/](/engine/api/), requires
+
+标签页使用的是 Bootstrap CSS/JS，因此请参考相关的文档来获得有关标签页使用的更多有关内容和信息。针对标准的水平标签页，你可以拷贝和粘贴下面的表单内容，在上面的表单内容中关键的地方在 `href="#id"` 和 `id="id"`。
+
+这个需要和你的标签页配置进行对应。以便于添加和删除标签页。
 
 ```html
 <ul class="nav nav-tabs">
@@ -249,9 +243,9 @@ references as you rename, add, and remove tabs.
 </div>
 ```
 
-For more info and a few more permutations, see `test.md`.
+有关更多标签页的内容，请参考 `test.md` 页面中的内容。
 
-### Running in-page Javascript
+### 运行页面中的 Javascript
 
 If you need to run custom Javascript within a page, and it depends upon JQuery
 or Bootstrap, make sure the `<script>` tags are at the very end of the page,
@@ -260,7 +254,7 @@ Bootstrap JS are loaded.
 
 > **Note**: In general, this is a bad idea.
 
-### Images
+### 图片
 
 Don't forget to remove images that are no longer used. Keep the images sorted
 in the local `images/` directory, with names that naturally group related images
