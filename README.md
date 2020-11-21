@@ -247,12 +247,11 @@ no_ratings: true
 
 ### 运行页面中的 Javascript
 
-If you need to run custom Javascript within a page, and it depends upon JQuery
-or Bootstrap, make sure the `<script>` tags are at the very end of the page,
-after all the content. Otherwise the script may try to run before JQuery and
-Bootstrap JS are loaded.
+如果你需要在页面中运行自定义的 Javascript 脚本，这个是需要基于 JQuery 和 Bootstrap 来进行运行的。
 
-> **Note**: In general, this is a bad idea.
+请确定 `<script>` 标记存储在页面的最后（在所有页面都被载入完成以后）。这是因为，如果你的脚本在页面之前的话，很有肯能导致你的页面在 JQuery 和 Bootstrap JS 载入完成之前运行，这会导致脚本错误。
+
+> **Note**: 通常来说这个是一个糟糕的决定。
 
 ### 图片
 
