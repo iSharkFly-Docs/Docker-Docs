@@ -143,7 +143,7 @@ docker-compose down
 JEKYLL_ENV=production docker-compose up --build
 ```
 
-当构建完成后，请访 [http://localhost:4000](http://localhost:4000) 地址中的内容来确定构建的正确。
+当构建完成后，请访问 [http://localhost:4000](http://localhost:4000) 地址中的内容来确定构建的正确。
 
 如果你对文档进行了修改，并且需要重新构建的话，你需要重复上面的步骤。
 
