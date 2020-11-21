@@ -283,3 +283,5 @@ $ killall SystemUIServer  # restart it.
 Copyright 2013-2020 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
 
 中文版本的翻译和维护由 CWIKIUS 进行。我们允许在非商业的情况下自由扩散分发，并保留适当的权利。您可以对我们的作品进行演绎，但需要保留版权信息和来源。
+
+本中文版本请参考：https://docker.ossez.com/ 页面中的编译部署内容和 https://docker-docs.ossez.com/ 基于 MD 的编译版本。
