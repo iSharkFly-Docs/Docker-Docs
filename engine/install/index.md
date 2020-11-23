@@ -25,21 +25,20 @@ Docker 引擎可以在一系列服务器上进行安装，比如说  [Linux 平�
 
 访问下面的链接访问可以支持的操作平台列表。
 
-### Desktop
+### 桌面系统
 
 {% assign yes = '![yes](/images/green-check.svg){: .inline style="height: 14px; margin: 0 auto"}' %}
 
 | Platform                                                          | x86_64 / amd64                                   |
 |:------------------------------------------------------------------|:------------------------------------------------:|
-| [Docker Desktop for Mac (macOS)](../../docker-for-mac/install.md) | [{{ yes }}](../../docker-for-mac/install.md)     |
-| [Docker Desktop for Windows](../../docker-for-windows/install.md) | [{{ yes }}](../../docker-for-windows/install.md) |
+| [Mac (macOS) Docker 桌面客户端](../../docker-for-mac/install.md) | [{{ yes }}](../../docker-for-mac/install.md)     |
+| [Windows Docker 桌面客户端](../../docker-for-windows/install.md) | [{{ yes }}](../../docker-for-windows/install.md) |
 
-### Server
+### 服务器
 
-Docker provides `.deb` and `.rpm` packages from the following Linux distributions
-and architectures:
+Docker 针对下面的 Linux 分发平台和架构提供 `.deb` 和 `.rpm` 安装包：
 
-| Platform              | x86_64 / amd64         | ARM                      | ARM64 / AARCH64        |
+| 平台              | x86_64 / amd64         | ARM                      | ARM64 / AARCH64        |
 |:----------------------|:-----------------------|:-------------------------|:-----------------------|
 | [CentOS](centos.md)   | [{{ yes }}](centos.md) |                          | [{{ yes }}](centos.md) |
 | [Debian](debian.md)   | [{{ yes }}](debian.md) | [{{ yes }}](debian.md)   | [{{ yes }}](debian.md) |
@@ -47,45 +46,31 @@ and architectures:
 | [Raspbian](debian.md) |                        | [{{ yes }}](debian.md)   | [{{ yes }}](debian.md) |
 | [Ubuntu](ubuntu.md)   | [{{ yes }}](ubuntu.md) | [{{ yes }}](ubuntu.md)   | [{{ yes }}](ubuntu.md) |
 
-### Other Linux distributions
+### 其他 Linux 分发包
 
 > **Note**
 >
-> While the instructions below may work, Docker does not test or verify
-> installation on derivatives.
+> 下面的安装指南可能是工作的，Docker 没有对下面的安装平台进行测试和校验。
 
-- Users of Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or 
-  "LMDE" (Debian-based Mint) should follow the installation instructions for
-  [Debian](debian.md), substituting the version of their distro for the
-  corresponding Debian release. Refer to the documentation of your distro to find
-  which Debian release corresponds with your derivative version.
-- Likewise, users of Ubuntu derivatives such as "Kubuntu", "Lubuntu" or "Xubuntu"
-  should follow the installation instructions for [Ubuntu](ubuntu.md),
-  substituting the version of their distro for the corresponding Ubuntu release.
-  Refer to the documentation of your distro to find which Ubuntu release
-  corresponds with your derivative version.
-- Some Linux distributions are providing a package of Docker Engine through their
-  package repositories. These packages are built and maintained by the Linux
-  distribution's package maintainers and may have differences in configuration
-  or built from modified source code. Docker is not involved in releasing these
-  packages and bugs or issues involving these packages should be reported in
-  your Linux distribution's issue tracker.
+- 使用基于 Debian 衍生版本，例如： "BunsenLabs Linux"， "Kali Linux" 或 "LMDE" (Debian-based Mint) 请按照
+  [Debian](debian.md) 的安装过程和帮助来进行安装, 并且使用相应的 Debian 的替代版本来进行进行安装。请参考你使用的操作系统版本的文档来找到与 Debian 版本对应的衍生版本。
+-  使用基于 Ubuntu 衍生版本，例如： "Kubuntu", "Lubuntu" 或 "Xubuntu" 请按照 [Ubuntu](ubuntu.md) 的安装过程和帮助来进行安装, 
+  并且使用相应的 Ubuntu 的替代版本来进行进行安装。请参考你使用的操作系统版本的文档来找到与 Ubuntu 版本对应的衍生版本。
+- 一些 Linux 的发行版本会在这些操作系统的仓库中自行提供针对 Docker Engine 引擎的安装包。这些安装包是是这些 Linux 操作系统进行开发并且维护的，
+  可能与你从基于源代码的编译结果来看有所不同。Docker 的官方与上面的发布版本没有任何关系也不会为其提供支持和缺陷修复。如果你发现有使用的问题，
+  你应该向这些操作系统进行维护组织提出。
 
-Docker provides [binaries](binaries.md) for manual installation of Docker Engine.
-These binaries are statically linked and can be used on any Linux distribution.
+Docker 引擎针对手动进行安装，提供了 [binaries](binaries.md) 二进制安装包。这些二进制安装包应该可以使用在任何的 Linux 分发版本上。
 
-## Release channels
+## 发布渠道
 
-Docker Engine has three types of update channels, **stable**, **test**,
-and **nightly**:
+Docker 引擎具有下面 3 个更新渠道： **stable**， **test** 和 **nightly**：
 
-* The **Stable** channel gives you latest releases for general availability.
-* The **Test** channel gives pre-releases that are ready for testing before
-  general availability (GA).
-* The **Nightly** channel gives you latest builds of work in progress for the
-  next major release.
+* **Stable** 渠道提供给你最新可用的稳定版本。
+* **Test** 渠道提供了在发布之前的预览，被用于 general availability (GA) 之前的测试。
+* **Nightly** 渠道在针对下一个主要发行版本的每天晚间自动构建包。
 
-### Stable
+### 稳定版
 
 Year-month releases are made from a release branch diverged from the master
 branch. The branch is created with format `<year>.<month>`, for example
@@ -94,7 +79,7 @@ month to expect the release to be generally available. All further patch
 releases are performed from that branch. For example, once `v19.03.0` is
 released, all subsequent patch releases are built from the `19.03` branch.
 
-### Test
+### 测试
 
 In preparation for a new year-month release, a branch is created from
 the master branch with format `YY.mm` when the milestones desired by
@@ -103,7 +88,7 @@ such as betas and release candidates are conducted from their respective release
 branches. Patch releases and the corresponding pre-releases are performed
 from within the corresponding release branch.
 
-### Nightly
+### 晚间构建
 
 Nightly builds give you the latest builds of work in progress for the next major
 release. They are created once per day from the master branch with the version
@@ -117,7 +102,7 @@ of the commit hash, for example `0.0.0-20180720214833-f61e0f7`.
 These builds allow for testing from the latest code on the master branch. No
 qualifications or guarantees are made for the nightly builds.
 
-## Support
+## 支持
 
 Docker Engine releases of a year-month branch are supported with patches as
 needed for one month after the next year-month general availability release.
@@ -138,17 +123,17 @@ If there are important fixes that ought to be considered for backport to
 active release branches, be sure to highlight this in the PR description
 or by adding a comment to the PR.
 
-### Upgrade path
+### 升级路径
 
 Patch releases are always backward compatible with its year-month version.
 
-### Licensing
+### 许可证
 
 Docker is licensed under the Apache License, Version 2.0. See
 [LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
 license text.
 
-## Reporting security issues
+## 报告安全性问题
 
 The Docker maintainers take security seriously. If you discover a security
 issue, please bring it to their attention right away!
@@ -159,7 +144,7 @@ to security@docker.com.
 Security reports are greatly appreciated, and Docker will publicly thank you
 for it.
 
-## Get started
+## 开始使用
 
 After setting up Docker, you can learn the basics with
 [Getting started with Docker](../../get-started/index.md).
