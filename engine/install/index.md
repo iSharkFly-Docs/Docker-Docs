@@ -29,7 +29,7 @@ Docker 引擎可以在一系列服务器上进行安装，比如说  [Linux 平�
 
 {% assign yes = '![yes](/images/green-check.svg){: .inline style="height: 14px; margin: 0 auto"}' %}
 
-| Platform                                                          | x86_64 / amd64                                   |
+| 平台                                                          | x86_64 / amd64                                   |
 |:------------------------------------------------------------------|:------------------------------------------------:|
 | [Mac (macOS) Docker 桌面客户端](../../docker-for-mac/install.md) | [{{ yes }}](../../docker-for-mac/install.md)     |
 | [Windows Docker 桌面客户端](../../docker-for-windows/install.md) | [{{ yes }}](../../docker-for-windows/install.md) |
@@ -72,79 +72,60 @@ Docker 引擎具有下面 3 个更新渠道： **stable**， **test** 和 **nigh
 
 ### 稳定版
 
-Year-month releases are made from a release branch diverged from the master
-branch. The branch is created with format `<year>.<month>`, for example
-`19.03`. The year-month name indicates the earliest possible calendar
-month to expect the release to be generally available. All further patch
-releases are performed from that branch. For example, once `v19.03.0` is
-released, all subsequent patch releases are built from the `19.03` branch.
+年-月（Year-month） 的分支将会发布到 master 分支中。这个分支将会使用下面的格式 `<year>.<month>` 来创建，例如 `19.03`。
+年-月的命名由 GA 版本的最早确定的日历数据来进行确定。所有随后的特性补丁将会通过在版本号的序列来进行发布。例如，一旦 `v19.03.0` 版本发布后，
+所有的后续发布的版本将会在基于 `19.03` 这个分支下来发布。
 
 ### 测试
 
-In preparation for a new year-month release, a branch is created from
-the master branch with format `YY.mm` when the milestones desired by
-Docker for the release have achieved feature-complete. Pre-releases
-such as betas and release candidates are conducted from their respective release
-branches. Patch releases and the corresponding pre-releases are performed
-from within the corresponding release branch.
+在计划进行新的 year-month 的发布之前，一个分支将会从 master 分支进行创建，并被命名为 `YY.mm`。这个表明的是基于 Docker 里程碑的开放已经完成了。
+一个预发布的测试版本的发布版本进行发布。发布的补丁和相关预发布的发布内容将会发布到发布的分支中。
 
 ### 晚间构建
 
-Nightly builds give you the latest builds of work in progress for the next major
-release. They are created once per day from the master branch with the version
-format:
+晚间构建将会给个你一个基于下一个主要发布版本的最新构建，这个最新的构建有最新的特性和版本的修复。
 
     0.0.0-YYYYmmddHHMMSS-abcdefabcdef
 
-where the time is the commit time in UTC and the final suffix is the prefix
-of the commit hash, for example `0.0.0-20180720214833-f61e0f7`.
+版本提交的 UTC 时间戳将会添加到发布版本的名称中，同时还会添加一个提交版本的哈希代码。如下：`0.0.0-20180720214833-f61e0f7`.
 
-These builds allow for testing from the latest code on the master branch. No
-qualifications or guarantees are made for the nightly builds.
+这个构建将会允许你使用最新的 master 分支来进行测试和构建。我们不能保证所有晚间构建能够正常的工作并且符合所有的安全性要求。
 
 ## 支持
 
-Docker Engine releases of a year-month branch are supported with patches as
-needed for one month after the next year-month general availability release.
+基于 年-月（Year-month） 格式的 Docker 引擎发布通常能够被支持一个月直到下一个月的 GA 版本发布。
 
-This means bug reports and backports to release branches are assessed
-until the end-of-life date.
+这个意味着缺陷报告和可能的反向一致发布将会被评估知道达到发布版本的生命周期。
 
-After the year-month branch has reached end-of-life, the branch may be
-deleted from the repository.
+当基于 年-月（Year-month）发布格式的发布达到生命周期后，Git 仓库的分支有可能会被删除。
 
-### Backporting
+### 反向移植（backport）
 
-Backports to the Docker products are prioritized by the Docker company. A
-Docker employee or repository maintainer will endeavour to ensure sensible
-bugfixes make it into _active_ releases.
+反向移植是 Docker 公司针对 Docker 进行优先处理的问题。一个 Docker 公司的雇员或者代码仓库的维护人员将会进行评估和确定这些问题的修复能够被支持，
+并确定呢能够放到下一个 _发布_ 的版本中。leases.
 
-If there are important fixes that ought to be considered for backport to
-active release branches, be sure to highlight this in the PR description
-or by adding a comment to the PR.
+如果你在提交代码的时候发现这个问题是一个比较重要的问题并且有可能面临反向移植（backport）问题。请确定在你提交的时候在提交内容高亮显示，你也可以在提交中明确说明。
 
 ### 升级路径
 
-Patch releases are always backward compatible with its year-month version.
+补丁的发布在升级的时候总是与基于 年-月（Year-month） 发布的版本是兼容的。
 
 ### 许可证
 
-Docker is licensed under the Apache License, Version 2.0. See
-[LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
-license text.
+Copyright 2013-2020 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
+
+Docker 是基于 Apache License, Version 2.0 许可证进行发布的。请查看 
+[许可证](https://github.com/moby/moby/blob/master/LICENSE) 页面来获得更多的信息。
 
 ## 报告安全性问题
 
-The Docker maintainers take security seriously. If you discover a security
-issue, please bring it to their attention right away!
+Docker 的维护者针对平台可能出现的安全问题非常重视。如果你在使用 Docker 的时候发现了任何问题，请马上与 Docker 的维护团队进行联系。
 
-Please DO NOT file a public issue; instead send your report privately
-to security@docker.com.
+请 **不要** 将这些安全问题公开发布，请将这个安全问题发送邮件到 security@docker.com 邮箱中。
 
-Security reports are greatly appreciated, and Docker will publicly thank you
-for it.
+安全报告对我们来说非常重要，Docker 的维护团队将会公开的感谢您对安全问题的贡献。
 
 ## 开始使用
 
-After setting up Docker, you can learn the basics with
+当你设置好 Docker 后，你可以开始学习 Docker 的一些基本使用了。
 [Getting started with Docker](../../get-started/index.md).
