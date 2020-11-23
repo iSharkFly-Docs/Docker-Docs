@@ -1,5 +1,5 @@
 ---
-title: Install Docker Engine
+title: 安装 Docker 引擎（Docker Engine）
 description: Lists the installation methods
 keywords: docker, installation, install, Docker Engine, Docker Engine, docker editions, stable, edge
 redirect_from:
@@ -17,12 +17,13 @@ redirect_from:
 ---
 
 
-## Supported platforms
+## 支持的平台
 
-Docker Engine is available on a variety of [Linux platforms](#server),
-[macOS](../../docker-for-mac/install.md) and [Windows 10](../../docker-for-windows/install.md)
-through Docker Desktop, and as a [static binary installation](binaries.md). Find
-your preferred operating system below.
+Docker 引擎可以在一系列服务器上进行安装，比如说  [Linux 平台](#server)，
+[macOS](../../docker-for-mac/install.md) 和 [Windows 10](../../docker-for-windows/install.md)
+需要通过 Docker 的 [静态二进制安装程序](binaries.md) 来进行客户端进行安装。
+
+访问下面的链接访问可以支持的操作平台列表。
 
 ### Desktop
 
