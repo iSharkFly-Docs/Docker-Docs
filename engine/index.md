@@ -26,13 +26,11 @@ Docker Engine 实际上是一个客户端服务器（client-server）应用：
 
 ## Docker 用户指南
 
-To learn about Docker in more detail and to answer questions about usage and
-implementation, check out the [overview page in "get started"](../get-started/overview.md).
+希望了解更多 Docker 的信息和有关使用和实现的问题和回答，请参考 [overview page in "get started"](../get-started/overview.md) 页面中的内容。
 
 ## 安装指南
 
-The [installation section](install/index.md) shows you how to install Docker
-on a variety of platforms.
+请参考 [installation section](install/index.md) 页面中的内容来针对不同平台的 Docker 安装指南。
 
 ## 发行日志
 
