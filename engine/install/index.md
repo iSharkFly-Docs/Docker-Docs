@@ -52,9 +52,9 @@ Docker 针对下面的 Linux 分发平台和架构提供 `.deb` 和 `.rpm` 安�
 >
 > 下面的安装指南可能是工作的，Docker 没有对下面的安装平台进行测试和校验。
 
-- 使用基于 Debian 衍生版本，例如： "BunsenLabs Linux"， "Kali Linux" 或者 "LMDE" (Debian-based Mint) 请按照
+- 使用基于 Debian 衍生版本，例如： "BunsenLabs Linux"， "Kali Linux" 或 "LMDE" (Debian-based Mint) 请按照
   [Debian](debian.md) 的安装过程和帮助来进行安装, 并且使用相应的 Debian 的替代版本来进行进行安装。请参考你使用的操作系统版本的文档来找到与 Debian 版本对应的衍生版本。
--  使用基于 Ubuntu 衍生版本，例如： "Kubuntu", "Lubuntu" or "Xubuntu" 请按照 [Ubuntu](ubuntu.md) 的安装过程和帮助来进行安装, 
+-  使用基于 Ubuntu 衍生版本，例如： "Kubuntu", "Lubuntu" 或 "Xubuntu" 请按照 [Ubuntu](ubuntu.md) 的安装过程和帮助来进行安装, 
   并且使用相应的 Ubuntu 的替代版本来进行进行安装。请参考你使用的操作系统版本的文档来找到与 Ubuntu 版本对应的衍生版本。
 - 一些 Linux 的发行版本会在这些操作系统的仓库中自行提供针对 Docker Engine 引擎的安装包。这些安装包是是这些 Linux 操作系统进行开发并且维护的，
   可能与你从基于源代码的编译结果来看有所不同。Docker 的官方与上面的发布版本没有任何关系也不会为其提供支持和缺陷修复。如果你发现有使用的问题，
