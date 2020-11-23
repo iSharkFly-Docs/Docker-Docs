@@ -14,27 +14,23 @@ Docker Engine 是一个开源的容器技术，被用来对你的应用进行容
 
 Docker Engine 实际上是一个客户端服务器（client-server）应用：
 
-* A server with a long-running daemon process [`dockerd`](/engine/reference/commandline/dockerd).
-* APIs which specify interfaces that programs can use to talk to and
-  instruct the Docker daemon.
-* A command line interface (CLI) client [`docker`](/engine/reference/commandline/cli/).
+* 一个在服务器上长期运行的被称为 [`dockerd`](/engine/reference/commandline/dockerd) 的进程。
+* 一个指定结构的 APIs，这个 API 被用来与 Docker 守护进程进行通信。
+* 一个命令行界面（CLI）客户端 [`docker`](/engine/reference/commandline/cli/)。
 
-The CLI uses [Docker APIs](api/index.md) to control or interact with the Docker
-daemon through scripting or direct CLI commands. Many other Docker applications
-use the underlying API and CLI. The daemon creates and manage Docker objects,
-such as images, containers, networks, and volumes.
+命令行界面（CLI）使用 [Docker APIs](api/index.md) 来控制和与 Docker 来互相作用。这个使用脚本或者 CLI 命令行来进行控制和执行。
+其他 Docker 应用使用下层 API 和 CLI 来对 Docker 来进行控制。Docker 守护进程创建和管理 Docker 的对象（objects），
+例如 镜像（images），容器（containers），网络（networks），卷（volumes）。
 
-For more details, see [Docker Architecture](../get-started/overview.md#docker-architecture).
+更多的信息和内容，请参考： [Docker Architecture](../get-started/overview.md#docker-architecture)。
 
 ## Docker 用户指南
 
-To learn about Docker in more detail and to answer questions about usage and
-implementation, check out the [overview page in "get started"](../get-started/overview.md).
+希望了解更多 Docker 的信息和有关使用和实现的问题和回答，请参考 [overview page in "get started"](../get-started/overview.md) 页面中的内容。
 
 ## 安装指南
 
-The [installation section](install/index.md) shows you how to install Docker
-on a variety of platforms.
+请参考 [installation section](install/index.md) 页面中的内容来针对不同平台的 Docker 安装指南。
 
 ## 发行日志
 
