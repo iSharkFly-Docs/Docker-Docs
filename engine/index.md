@@ -34,23 +34,16 @@ Docker Engine 实际上是一个客户端服务器（client-server）应用：
 
 ## 发行日志
 
-A summary of the changes in each release in the current series can now be found
-on the separate [Release Notes page](release-notes/index.md)
+针对当前的版本的修改和历史版本的修改日志，请参考  [Release Notes page](release-notes/index.md) 页面中的内容。
 
 ## 特性丢弃策略
 
-As changes are made to Docker there may be times when existing features
-need to be removed or replaced with newer features. Before an existing
-feature is removed it is labeled as "deprecated" within the documentation
-and remains in Docker for at least 3 stable releases unless specified
-explicitly otherwise. After that time it may be removed.
+Docker 容器随着版本的改变和新特性的添加可能随着性能的变化和添加而过期而被替代掉。在已经存在的特性被删除之前，这个特性将会在文档中标记为 "deprecated"。
+这个标记将会在 Docker 中至少保持 3 个稳定的版本，除非被明确的表示将会被删除掉。
 
-Users are expected to take note of the list of deprecated features each
-release and plan their migration away from those features, and (if applicable)
-towards the replacement features as soon as possible.
+针对需要删除的特性列表，用户将会被建议先记录下来，并且针对一些被删除的特性，用户在进行版本合并的时候尽量先合并这些新的特性，并尽可能的先替换掉。
 
-The complete list of deprecated features can be found on the
-[Deprecated Features page](deprecated.md).
+完整的需要删除的特性列表，请参考页面：[Deprecated Features page](deprecated.md) 中的内容。
 
 ## 许可证
 
