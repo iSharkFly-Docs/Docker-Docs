@@ -8,7 +8,7 @@
 exclude: ["_scripts", "404.html", "index.html"]
 
 # Google Analytics, etc.
-google_analytics: GTM-WL2QLG5
+google_analytics: GTM-W3NL9V
 polldaddy_id:     8453675
 
 # Enable search autocompletion (requires metadata.json to be generated)
