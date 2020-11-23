@@ -26,7 +26,7 @@ Docker Engine 实际上是一个客户端服务器（client-server）应用：
 
 ## Docker 用户指南
 
-希望了解更多 Docker 的信息和有关使用和实现的问题和回答，请参考 [overview page in "get started"](../get-started/overview.md) 页面中的内容。
+希望了解更多 Docker 的信息和有关使用和实现的问题和回答，请参考 [get started](../get-started/overview.md) 页面中的内容。
 
 ## 安装指南
 
