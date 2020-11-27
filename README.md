@@ -105,7 +105,7 @@ docker-compose up -d --build
 ```
 
 > Docker Compose 包含有 [Docker Desktop](https://docs.docker.com/desktop)。
-> 如果你的计算机上没有安装 Docker Compose，请访问下面的链接上的参考来进行安装：https://docs.docker.com/compose/install/。
+> 如果你的计算机上没有安装 Docker Compose，请访问下面的链接上的参考来进行安装：cd 。
 
 一旦容器被构建和运行了，请通过浏览器来访问 [http://localhost:4000](http://localhost:4000]地址来查看构建成功的文档页面。
 

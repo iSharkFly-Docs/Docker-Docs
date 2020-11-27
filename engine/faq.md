@@ -3,14 +3,14 @@ description: Most frequently asked questions.
 keywords: faq, questions, documentation,  docker
 redirect_from:
 - /engine/misc/faq/
-title: Docker frequently asked questions (FAQ)
+title: Docker 常见的问题 frequently asked questions (FAQ)
 ---
 
-### Does Docker run on Linux, macOS, and Windows?
+### Docker 可以在 Linux, macOS, 和 Windows 上运行吗？
 
-You can run both Linux and Windows programs and executables in Docker containers. The Docker platform runs natively on Linux (on x86-64, ARM and many other CPU architectures) and on Windows (x86-64).
-
-Docker Inc. builds products that let you build and run containers on Linux, Windows and macOS.
+你可以在 Linux 和 Windows 的程序和执行 Docker 容器。
+Docker 平台可以在原生的 Linux 上（x86-64, ARM 和更多其他的 CPU 架构）和 Windows（x86-64） 上运行。
+Docker Inc. 构建产品，能够让你在 Linux, Windows 和 macOS 上构建和运行容器。 
 
 ### What does Docker technology add to just plain LXC?
 
