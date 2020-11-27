@@ -80,16 +80,15 @@ private containers, for internal server deployments for example.
  Strider, Travis), etc. Docker is rapidly establishing itself as the standard
  for container-based tooling.
 
-### What is different between a Docker container and a VM?
+### Docker 容器和 VM（虚拟机） 有什么区别？
 
-There's a great StackOverflow answer [showing the differences](
+在 StackOverflow 上有针对这个问题的回答，请参考 [显示虚拟化的区别](
 https://stackoverflow.com/questions/16047306/how-is-docker-io-different-from-a-normal-virtual-machine){: target="_blank" rel="noopener" class="_"}.
 
-### Do I lose my data when the container exits?
+### 当容器退出的时候我会丢失数据吗？
 
-Not at all! Any data that your application writes to disk gets preserved in its
-container until you explicitly delete the container. The file system for the
-container persists even after the container halts.
+完全不会丢失数据！所有你应用程序写入到磁盘的数据将会被完好的保存在容器中，直到你明确的删除容器。
+在容器停止运行后，针对容器持久性的事件的文件系统还是在运行的。
 
 ### How far do Docker containers scale?
 
