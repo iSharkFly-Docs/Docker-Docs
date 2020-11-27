@@ -4,21 +4,18 @@ keywords: Examples, Usage, volume, docker, documentation, user guide, data, volu
 redirect_from:
 - /engine/userguide/containers/networkigncontainers/
 - /engine/userguide/networkigncontainers/
-title: Network containers
+title: 容器的网络（Network containers）
 ---
 
-If you are working your way through the user guide, you just built and ran a
-simple application. You've also built in your own images. This section teaches
-you how to network your containers.
+如果你通过 Docker 提供的用户指南，你应该已经完成了构建你的第一个 Docker 容器，并且运行了示例应用。
+你已经构建了你自己的镜像（images）。本部分的内容将会指导你如何对你的容器进行网络配置。
 
-## Launch a container on the default network
+## 使用默认网络来运行一个容器
 
-Docker includes support for networking containers through the use of **network
-drivers**. By default, Docker provides two network drivers for you, the
-`bridge` and the `overlay` drivers. You can also write a network driver plugin so
-that you can create your own drivers but that is an advanced task.
+Docker 能够支持通过  **network drivers** 来使用网络的容器。在默认的情况下，Docker 为你提供了 2 个网络驱动： `bridge` 和 `overlay` 驱动。
+你也可以通过写一个网络驱动插件来创建你自己的网络驱动，但是这个属于比较高级的任务了。
 
-Every installation of the Docker Engine automatically includes three default networks. You can list them:
+在任何完成安装的 Docker 中将会自动包含有下面 3 个网络驱动，你可以通过下面的命令来列表出来：
 
     $ docker network ls
 
@@ -27,7 +24,7 @@ Every installation of the Docker Engine automatically includes three default net
     c288470c46f6        host                host
     7b369448dccb        bridge              bridge
 
-The network named `bridge` is a special network. Unless you tell it otherwise, Docker always launches your containers in this network. Try this now:
+被命名 `bridge` 的网络是一个特殊的网络。除非你再运行的时候指定一个网络，否则 Docker 容器将会一直运行这个网络。尝试运行下面的命令：
 
     $ docker run -itd --name=networktest ubuntu
 
@@ -35,7 +32,7 @@ The network named `bridge` is a special network. Unless you tell it otherwise, D
 
 ![bridge1](bridge1.png)
 
-Inspecting the network is an easy way to find out the container's IP address.
+通过检查网络，可以非常容易的找到你容器的 IP 地址。
 
 ```bash
 $ docker network inspect bridge
@@ -80,14 +77,15 @@ $ docker network inspect bridge
 ]
 ```
 
-You can remove a container from a network by disconnecting the container. To do this, you supply both the network name and the container name. You can also use the container ID. In this example, though, the name is faster.
+通过断开与容器的链接，你也可以将容器从网络中删除。
+如果要将容器从网络中删除的话，你需要同时提供网络名（network name）和容器名（container name）。
+你也可以使用容器 ID，但是使用容器名相对使用容器 ID 来说，更加快速。
 
     $ docker network disconnect bridge networktest
 
-While you can disconnect a container from a network, you cannot remove the
-builtin `bridge` network named `bridge`. Networks are natural ways to isolate
-containers from other containers or other networks. So, as you get more
-experienced with Docker, create your own networks.
+尽管你可以将容器从一个网络中断开连接，但是你不能删除 Docker 内部构建的被命名为 `bridge` 的 `bridge` 网络。
+网络是将一个容器与其他容器独立开或者容器与其他网络独立开的最常规的方式。
+因此，当你有更多使用 Docker 经验的时候，可以尝试创建你自己的网络。
 
 ## Create your own bridge network
 
