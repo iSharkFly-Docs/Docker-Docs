@@ -137,17 +137,17 @@ Docker 引擎能够原生支持桥接网络（bridge networks）和覆盖网络�
     ]
 
 ## 添加容器到一个网络
+要创建一个安全并且能够协同运行的 Web 应用程序，你需要创建一个网络。
 
-To build web applications that act in concert but do so securely, create a
-network. Networks, by definition, provide complete isolation for containers. You
-can add containers to a network when you first run a container.
+通过网络，在默认情况下为容器提供了完全独立的环境。在你第一次运行一个容器的时候，你可以将容器添加到一个网络中。
 
-Launch a container running a PostgreSQL database and pass it the `--net=my_bridge` flag to connect it to your new network:
+例如，我们希望运行一个容器来运行 PostgreSQL 数据库，并且传递 `--net=my_bridge` 标记来到你新网络的连接中，可以运行下面的命令：
 
     $ docker run -d --net=my_bridge --name db training/postgres
 
-If you inspect your `my_bridge` you can see it has a container attached.
-You can also inspect your container to see where it is connected:
+如果你检查你的 `my_bridge` ，你可以看到已经有一个容器被添加（attached）上去了。
+
+你也可以检查你的容器来查看连接在哪里：
 
     {% raw %}
     $ docker inspect --format='{{json .NetworkSettings.Networks}}'  db
@@ -156,13 +156,13 @@ You can also inspect your container to see where it is connected:
     {"my_bridge":{"NetworkID":"7d86d31b1478e7cca9ebed7e73aa0fdeec46c5ca29497431d3007d2d9e15ed99",
     "EndpointID":"508b170d56b2ac9e4ef86694b0a76a22dd3df1983404f7321da5649645bf7043","Gateway":"10.0.0.1","IPAddress":"10.0.0.254","IPPrefixLen":24,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"MacAddress":"02:42:ac:11:00:02"}}
 
-Now, go ahead and start your by now familiar web application. This time don't specify a network.
+现在，你可以使用你熟悉的命令来启动一个 Web 应用程序了。这次不需要指定一个网络。
 
     $ docker run -d --name web training/webapp python app.py
 
 ![bridge2](bridge2.png)
 
-Which network is your `web` application running under? Inspect the application to verify that it is running in the default `bridge` network.
+你的 `web` 应用运行在哪个网络下呢？可以检查应用来确定这个应用运行在默认的 `桥接（bridge）` 网络。
 
     {% raw %}
     $ docker inspect --format='{{json .NetworkSettings.Networks}}'  web
@@ -171,7 +171,7 @@ Which network is your `web` application running under? Inspect the application t
     {"bridge":{"NetworkID":"7ea29fc1412292a2d7bba362f9253545fecdfa8ce9a6e37dd10ba8bee7129812",
     "EndpointID":"508b170d56b2ac9e4ef86694b0a76a22dd3df1983404f7321da5649645bf7043","Gateway":"172.17.0.1","IPAddress":"10.0.0.2","IPPrefixLen":24,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"MacAddress":"02:42:ac:11:00:02"}}
 
-Then, get the IP address of your `web`
+然后获得你 `web` 应用的 IP 地址。
 
     {% raw %}
     $ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web
@@ -179,7 +179,7 @@ Then, get the IP address of your `web`
 
     172.17.0.2
 
-Now, open a shell to your running `db` container:
+现在，可以打开一个 shell 来运行 `db` 容器：
 
     $ docker container exec -it db bash
 
@@ -190,16 +190,20 @@ Now, open a shell to your running `db` container:
     --- 172.17.0.2 ping statistics ---
     44 packets transmitted, 0 received, 100% packet loss, time 43185ms
 
-After a bit, use `CTRL-C` to end the `ping` and notice that the ping failed. That is because the two containers are running on different networks. You can fix that. Then, use the `exit` command to close the container.
+在过一段时间后，可以使用 `CTRL-C` 来终止 `ping` 命令，请注意 ping 显示终止了。
 
-Docker networking allows you to attach a container to as many networks as you like. You can also attach an already running container. Go ahead and attach your running `web` app to the `my_bridge`.
+这是因为这个 2 个容器运行在不同的网络中，你可以使用 `exit` 命令来关闭容器进行修复。
+
+Docker 网络运行你附件一个容器到多个你愿意的网络上。你甚至可以添加到一个正在运行的容器上。
+
+运行下面的命令，将 `web` 应用添加到 `my_bridge` 网络上。
 
     $ docker network connect my_bridge web
 
 
 ![bridge3](bridge3.png)
 
-Open a shell into the `db` application again and try the ping command. This time just use the container name `web` rather than the IP address.
+打开 shell 然后再次进入 `db` 应用，然后尝试使用 ping 命令。这次你可以仅仅使用容器的名字 `web` 就可以了，而不需要使用 IP 地址。
 
     $ docker container exec -it db bash
 
@@ -213,7 +217,7 @@ Open a shell into the `db` application again and try the ping command. This time
     3 packets transmitted, 3 received, 0% packet loss, time 2000ms
     rtt min/avg/max/mdev = 0.060/0.073/0.095/0.018 ms
 
-The `ping` shows it is contacting a different IP address, the address on the `my_bridge` which is different from its address on the `bridge` network.
+命令 `ping` 显示连接到了一个不同的 IP 地址，这个在 `my_bridge` 上的 IP 地址与 `bridge` 网络上的 IP 地址是不同的。
 
 ## Next steps
 
