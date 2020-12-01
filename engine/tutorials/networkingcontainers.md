@@ -219,6 +219,6 @@ Docker 网络运行你附件一个容器到多个你愿意的网络上。你甚�
 
 命令 `ping` 显示连接到了一个不同的 IP 地址，这个在 `my_bridge` 上的 IP 地址与 `bridge` 网络上的 IP 地址是不同的。
 
-## Next steps
+## 下一步
 
 Now that you know how to network containers, see [how to manage data in containers](../../storage/volumes.md).
