@@ -24,7 +24,7 @@ Docker 能够支持通过  **network drivers** 来使用网络的容器。在默
     c288470c46f6        host                host
     7b369448dccb        bridge              bridge
 
-被命名 `bridge` 的网络是一个特殊的网络。除非你再运行的时候指定一个网络，否则 Docker 容器将会一直运行这个网络。尝试运行下面的命令：
+被命名 `bridge` 的网络是一个特殊的网络。除非你在运行的时候指定一个网络，否则 Docker 容器将会一直运行这个网络。尝试运行下面的命令：
 
     $ docker run -itd --name=networktest ubuntu
 
@@ -87,13 +87,21 @@ $ docker network inspect bridge
 网络是将一个容器与其他容器独立开或者容器与其他网络独立开的最常规的方式。
 因此，当你有更多使用 Docker 经验的时候，可以尝试创建你自己的网络。
 
-## Create your own bridge network
+## 创建你自己的桥接网络
 
-Docker Engine natively supports both bridge networks and overlay networks. A bridge network is limited to a single host running Docker Engine. An overlay network can include multiple hosts and is a more advanced topic. For this example, create a bridge network:
+Docker 引擎能够原生支持桥接网络（bridge networks）和覆盖网络（overlay networks）。
+
+桥接网络被限制用于一个独立主机运行的 Docker 引擎。覆盖网络能够包含有多个主机，这个有更多的高级特性。
+
+下面的例子显示了如何创建一个桥接网络： 
 
     $ docker network create -d bridge my_bridge
 
-The `-d` flag tells Docker to use the `bridge` driver for the new network. You could have left this flag off as `bridge` is the default value for this flag. Go ahead and list the networks on your machine:
+参数 `-d` 用于告诉 Docker 在新的网络中使用  `桥接（bridge）` 驱动。
+
+名字 `bridge` 是默认使用的网络名字，在创建的时候可以不指定这个参数，那么将会使用默认的网络名字来创建。
+
+当你创建成功后，可以使用下面的命令来查看你机器中的网络配置：
 
     $ docker network ls
 
@@ -103,7 +111,7 @@ The `-d` flag tells Docker to use the `bridge` driver for the new network. You c
     18a2866682b8        none                null
     c288470c46f6        host                host
 
-If you inspect the network, it has nothing in it.
+如果你使用下面的命令检查网络的话，你会看到在这里面没有任何内容。
 
     $ docker network inspect my_bridge
 
@@ -128,7 +136,7 @@ If you inspect the network, it has nothing in it.
         }
     ]
 
-## Add containers to a network
+## 添加容器到一个网络
 
 To build web applications that act in concert but do so securely, create a
 network. Networks, by definition, provide complete isolation for containers. You
