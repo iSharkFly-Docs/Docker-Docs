@@ -221,4 +221,4 @@ Docker 网络运行你附件一个容器到多个你愿意的网络上。你甚�
 
 ## 下一步
 
-Now that you know how to network containers, see [how to manage data in containers](../../storage/volumes.md).
+现在你应该对如何对容器进行网络配置有所了解了，请参考下一篇文章 [如何管理容器中的数据](../../storage/volumes.md).
