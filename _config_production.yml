@@ -54,19 +54,19 @@ defaults:
   - scope:
       path: engine/deprecated.md
     values:
-      edit_url: "https://github.com/docker/cli/tree/master/docs/"
+      edit_url: "https://github.com/cwiki-us-docs/docker-cli/tree/master/docs/"
   - scope:
       path: engine/extend.md
     values:
-      edit_url: "https://github.com/docker/cli/tree/master/docs/extend"
+      edit_url: "https://github.com/cwiki-us-docs/docker-cli/tree/master/docs/extend"
   - scope:
       path: engine/reference
     values:
-      edit_url: "https://github.com/docker/cli/tree/master/docs/reference"
+      edit_url: "https://github.com/cwiki-us-docs/docker-cli/tree/master/docs/reference"
   - scope:
       path: engine/reference/commandline
     values:
-      edit_url: "https://github.com/docker/cli/tree/master/docs/reference/commandline"
+      edit_url: "https://github.com/cwiki-us-docs/docker-cli/tree/master/docs/reference/commandline"
       skip_read_time: true
   - scope:
       path: glossary.md
