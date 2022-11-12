@@ -81,7 +81,7 @@ COPY --from=current /usr/share/nginx/html /
 #
 # To build current docs:
 # DOCKER_BUILDKIT=1 docker build -t docs .
-FROM nginx:alpine AS deploy
+FROM nginx:1.23.2-alpine AS deploy
 ENV TARGET=/usr/share/nginx/html
 WORKDIR $TARGET
 
