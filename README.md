@@ -1,12 +1,34 @@
 # iSharkFly Docker 文档和手册
 
-iSharkFly Docker 文档和手册
+iSharkFly Docker 文档和手册，使用 docsify 来对 MD 文件进行编译和修改。
 
-本文档的编译发布版本访问地址：[docker-docs.isharkfly.com](https://docker-docs.isharkfly.com)
+因为最近项目的工作需要，要求使用 Docker 来对项目进行容器化。
 
-iSharkFly（鲨鱼君） 有关 Docker 相关文档和讨论，请访问：[https://www.isharkfly.com/tags/c/computer-technology/system-and-container/25/docker](https://www.isharkfly.com/tags/c/computer-technology/system-and-container/25/docker)
+我们可能会用到项目中的一些有关的内容，因此特地整理的了一些相关的文档和翻译。
 
-GitHub 上有关 iSharkFly Docker 的项目的源代码文件：[https://github.com/iSharkFly-Docs/Docker-Docs](https://github.com/iSharkFly-Docs/Docker-Docs)
+## Docker 是什么
+
+Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux
+机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
+
+### Docker的组成
+一个完整的Docker有以下几个部分组成:
+* docker Client客户端
+* Docker Daemon守护进程
+* Docker Image镜像
+* Docker Container容器
+
+我们通过客户端写命令，然后客户端将命令发送给守护进程，守护进程再将命令执行的结果返回给客户端，这就使我们能通过命令查看执行结果，镜像就是容器的源代码，容器通过镜像启动，使用仓库来保存用户构建的镜像，仓库分为共有和私有。
+
+## 文档结构
+本文档的编译发布版本访问地址：[docker-docs.isharkfly.com](https://docker-docs.isharkfly.com) （本 WIKI 中的内容将会与GitHub
+中的源代码转换文件在线同步发布）。
+
+iSharkFly（鲨鱼君） 有关 Docker
+相关文档和讨论，请访问：[https://www.isharkfly.com/tags/c/computer-technology/system-and-container/25/docker](https://www.isharkfly.com/tags/c/computer-technology/system-and-container/25/docker)
+
+GitHub 上有关 iSharkFly Docker
+的项目的源代码文件：[https://github.com/iSharkFly-Docs/Docker-Docs](https://github.com/iSharkFly-Docs/Docker-Docs)
 
 如果您有兴趣参与我们的小组和项目，请使用下面的联系方式和我们联系：
 
@@ -18,11 +40,13 @@ GitHub 上有关 iSharkFly Docker 的项目的源代码文件：[https://github.
 | iSharkFly KB | [track.ossez.com/articles](https://track.ossez.com/articles)                                                                                                               |
 
 ## 微信及公众平台
+
 我们建议您通过社区论坛来和我们进行沟通，请关注我们的微信公众号。
 
 ![](https://cdn.ossez.com/img/cwikius/cwikius-qr-wechat-search-w400.png)
 
-## CWIKIUS 文档和手册快速导航
+## 文档和手册快速导航
+
 有关相关文档和我们参考过的一些内容的快速导航。
 
 | 网站地址                     | 网站链接                                         |
@@ -35,15 +59,19 @@ GitHub 上有关 iSharkFly Docker 的项目的源代码文件：[https://github.
 
 欢迎来到 Docker 文档的代码仓库。本代码仓库是文档 https://docs.docker.com 的源代码。
 
-如果你发现这个文档有任何问题，Docker 官方欢迎你来创建 合并请求（Pull Requests）。Docker 的文档是完全开源的，Docker 官方也非常感谢社区对 Docker 的贡献。
+如果你发现这个文档有任何问题，Docker 官方欢迎你来创建 合并请求（Pull Requests）。Docker 的文档是完全开源的，Docker 官方也非常感谢社区对
+Docker 的贡献。
 
 ## 提供反馈
 
-Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，并且我们将这个提供反馈的方法进行了调整，以便于更好的进行访问和提交。你可以对页面进行编辑或者针对 https://docs.docker.com 上每一个页面的右上角提供的链接来对内容进行编辑和提交合并请求。
+Docker 的官方和 iSharkFly
+都非常欢迎您对我们的内容进行反馈，并且我们将这个提供反馈的方法进行了调整，以便于更好的进行访问和提交。你可以对页面进行编辑或者针对 https://docs.docker.com
+上每一个页面的右上角提供的链接来对内容进行编辑和提交合并请求。
 
 你也可以对每一个页面来进行评分，评分的链接在页面的页脚。
 
-**本仓库只针对文档的内容进行修改。** 如果你考虑对文档进行修改的话，在提交 PR 之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
+**本仓库只针对文档的内容进行修改。** 如果你考虑对文档进行修改的话，在提交 PR
+之前你应该先考虑下这个问题应该是和文档相关的，比如说文档描述的不清楚，文档出现了错误，或者在文档让用户非常困惑等。
 
 * 如果你在使用 Docker 的时候遇到了问题，请访问 https://forums.docker.com 论坛中的内容。
 * 如果针对 Docker 的新功能和特性有什么更好的建议或者你找到了 Docker 的一个 bug，请使用 Docker 的代码仓库来提交你的问题。
@@ -60,9 +88,9 @@ Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，�
 
 ### 不需要在这里编辑的文件
 
-文件或者目录列在为 
+文件或者目录列在为
 
-[`.NOT_EDITED_HERE.yaml`](.NOT_EDITED_HERE.yaml) 
+[`.NOT_EDITED_HERE.yaml`](.NOT_EDITED_HERE.yaml)
 
 关键字的路径被其他仓库使用的是不应该进行编辑的。
 
@@ -87,7 +115,8 @@ Docker 的官方和 CWIKIUS 都非常欢迎您对我们的内容进行反馈，�
 
 否则的话，你将会看到一个错误信息，单击 **Details** 来查看暂存的站点或者阻止站点重构的错误。重新查看暂存的站点来确定是不是你提交的内容导致的错误。
 
-在 PR 合并到 master 分支之前，其他的项目相关人员同时也会查看暂存的站点。通过这个选项，我们来保护 https://docs.docker.com 站点不会有错误。
+在 PR 合并到 master 分支之前，其他的项目相关人员同时也会查看暂存的站点。通过这个选项，我们来保护 https://docs.docker.com
+站点不会有错误。
 
 ## 在本地构建和查看文档
 
@@ -117,7 +146,6 @@ docker-compose up -d --build
 
 一旦容器被构建和运行了，请通过浏览器来访问 [http://localhost:4000](http://localhost:4000]地址来查看构建成功的文档页面。
 
-
 如果你想停止预存（staging）的容器，请使用  *docker-compose down* 命令
 
 ```bash
@@ -126,12 +154,13 @@ docker-compose down
 
 ### 启用文档的部署特性
 
-在默认的本地构建文档中，我们禁用了一些特性来缩短文档的构建时间。在针对 [docs.docker.com](https://docs.docker.com) 网站中部署的文档和本地构建的文档有下面的一些配置不同：
+在默认的本地构建文档中，我们禁用了一些特性来缩短文档的构建时间。在针对 [docs.docker.com](https://docs.docker.com)
+网站中部署的文档和本地构建的文档有下面的一些配置不同：
 
 - 使用 `js/metadata.json` 的自动搜索完成
 - google analytics 配置
 - 页面评分配置（page ratings）
--  创建站点地图 `sitemap.xml`
+- 创建站点地图 `sitemap.xml`
 - 样式表的压缩和小型化（css/style.css）
 - 针对内容在其他仓库中的 "编辑页面（edit this page）" 页面的链接
 
@@ -182,29 +211,34 @@ Either way, you can now access the docs at port 4000 on your Docker host.
 
 ## GitHub 查看的相关链接
 
-你可以自由的链接到 `../foo.md` 文件，这样的话这个文本就可以在 GitHub 上进行阅读了，但是需要注意的是 Jekyll 模板将会通知templating notation
-`{% such as this %}` 将会被读成原始文档，而不会被处理。因此最好的办法就是访问官方 [https://docs.docker.com/](https://docs.docker.com/) 文档链接来进行阅读文档。
+你可以自由的链接到 `../foo.md` 文件，这样的话这个文本就可以在 GitHub 上进行阅读了，但是需要注意的是 Jekyll
+模板将会通知templating notation
+`{% such as this %}`
+将会被读成原始文档，而不会被处理。因此最好的办法就是访问官方 [https://docs.docker.com/](https://docs.docker.com/)
+文档链接来进行阅读文档。
 
 ### 测试修改和实践指南
 
-如果你希望对修改的样式表进行测试，或者你希望对 Markdown， Bootstrap， JQuery 或者其他的一些内容进行测试的话，请参考 `test.md` 中的内容（访问路径为 `/test/`）。
+如果你希望对修改的样式表进行测试，或者你希望对 Markdown， Bootstrap， JQuery
+或者其他的一些内容进行测试的话，请参考 `test.md` 中的内容（访问路径为 `/test/`）。
 
 ### 预页面字体格式
 
-字体格式将会告诉页面在 Markdown 文件的最上端，使用 3 个横线作为开始和结束。其中包括有 YAML 内容，下面为可以支持的关键字，包括有表头，描述和关键字是否是必须的。
+字体格式将会告诉页面在 Markdown 文件的最上端，使用 3 个横线作为开始和结束。其中包括有 YAML
+内容，下面为可以支持的关键字，包括有表头，描述和关键字是否是必须的。
 
-| 关键字                    | 是否必须  | 描述                             |
-|------------------------|-----------|-----------------------------------------|
-| title                  | 是       | 这个字段定义的是页面的标题，将会添加到 HTML 输出中的 `<h1>` 级别的头部。 |
-| description            | 是       | 一个描述页面内容的例子，将会添加到 HTML 的 metadata 上面。 |
-| keywords               | 是       | 一个使用逗号分隔符的关键字列表，将会添加到 HTML 的 metadata 上面。 |
-| redirect_from          | 否       | 一个 YAML 的列表，这个将会显示链接到当前页面的的所有页面列表。在页面处理的过程中，这个地方配置的页面内容，将会为那些页面创建一个 302 重定向链接到这个页面上。 |
-| notoc                  | 否       | 可以使用 `true` 或者 `false`。如果选择 `true` 的话， TOC 将不会在 HTML 输出的时候创建。默认的配置选项是 `false`。针对没有页面头部内容，将会创建相同的显示页面。|
-| toc_min                | 否       | 如果 `notoc` 设置为 `true` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最小的页面级别为。默认配置为 `2`， 意思是显示页面头部最小的开始为 `<h2>`。 |
-| toc_max                | 否       | 如果 `notoc` 设置为 `false` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最大的页面级别为。默认配置为 `3`， 意思是显示页面头部最小的开始为 `<h3>`。如果这个设置和 `toc_min` 相同的话，那么只有 `toc_min` 的级别标题被显示。 |
-| no_ratings             | 否       | 可以使用 `true` 或者 `false`。设置是否为页面设置投票，如果设置为 `true` 的话，页面将不会显示投票。默认为 `false`。 |
-| skip_read_time         | 否       | 设置 `true` 的话，将不会在页面中设置页面的估计阅读时间。 |
-| sitemap                | 否       | 通知这个页面将不会被搜索引擎进行索引，当设置为 `false` 的时候，这个页面将会从 `sitemap.xml` 中进行剔除，并且在页面的头部（header）将会添加 `<meta name="robots" content="noindex"/>` 这个内容。 |
+| 关键字            | 是否必须 | 描述                                                                                                                                           |
+|----------------|------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| title          | 是    | 这个字段定义的是页面的标题，将会添加到 HTML 输出中的 `<h1>` 级别的头部。                                                                                                  |
+| description    | 是    | 一个描述页面内容的例子，将会添加到 HTML 的 metadata 上面。                                                                                                        |
+| keywords       | 是    | 一个使用逗号分隔符的关键字列表，将会添加到 HTML 的 metadata 上面。                                                                                                    |
+| redirect_from  | 否    | 一个 YAML 的列表，这个将会显示链接到当前页面的的所有页面列表。在页面处理的过程中，这个地方配置的页面内容，将会为那些页面创建一个 302 重定向链接到这个页面上。                                                         |
+| notoc          | 否    | 可以使用 `true` 或者 `false`。如果选择 `true` 的话， TOC 将不会在 HTML 输出的时候创建。默认的配置选项是 `false`。针对没有页面头部内容，将会创建相同的显示页面。                                        |
+| toc_min        | 否    | 如果 `notoc` 设置为 `true` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最小的页面级别为。默认配置为 `2`， 意思是显示页面头部最小的开始为 `<h2>`。                                                 |
+| toc_max        | 否    | 如果 `notoc` 设置为 `false` 的话，这个选项将会被忽略。包括在页面 TOC 中头部，最大的页面级别为。默认配置为 `3`， 意思是显示页面头部最小的开始为 `<h3>`。如果这个设置和 `toc_min` 相同的话，那么只有 `toc_min` 的级别标题被显示。 |
+| no_ratings     | 否    | 可以使用 `true` 或者 `false`。设置是否为页面设置投票，如果设置为 `true` 的话，页面将不会显示投票。默认为 `false`。                                                                    |
+| skip_read_time | 否    | 设置 `true` 的话，将不会在页面中设置页面的估计阅读时间。                                                                                                             |
+| sitemap        | 否    | 通知这个页面将不会被搜索引擎进行索引，当设置为 `false` 的时候，这个页面将会从 `sitemap.xml` 中进行剔除，并且在页面的头部（header）将会添加 `<meta name="robots" content="noindex"/>` 这个内容。         |
 
 下面显示的内容是一个有效的页面 Metadata 配置（没有转换为 HTML）页面。在预页面格式中内容的顺序是没有关系的，你可以随意调整上面参数的顺序。
 
@@ -226,20 +260,24 @@ no_ratings: true
 
 ### 创建标签（Tab）页
 
-为了在页面中使用标签页，例如测试页面中的标签页：https://docker.ossez.com/test/，这个需要使用 HTML 文件。The use of tabs, as on pages like [https://docs.docker.com/engine/api/](/engine/api/), requires
+为了在页面中使用标签页，例如测试页面中的标签页：https://docker.ossez.com/test/，这个需要使用 HTML 文件。The use of tabs, as
+on pages like [https://docs.docker.com/engine/api/](/engine/api/), requires
 
-标签页使用的是 Bootstrap CSS/JS，因此请参考相关的文档来获得有关标签页使用的更多有关内容和信息。针对标准的水平标签页，你可以拷贝和粘贴下面的表单内容，在上面的表单内容中关键的地方在 `href="#id"` 和 `id="id"`。
+标签页使用的是 Bootstrap
+CSS/JS，因此请参考相关的文档来获得有关标签页使用的更多有关内容和信息。针对标准的水平标签页，你可以拷贝和粘贴下面的表单内容，在上面的表单内容中关键的地方在 `href="#id"`
+和 `id="id"`。
 
 这个需要和你的标签页配置进行对应。以便于添加和删除标签页。
 
 ```html
+
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" data-target="#tab1">TAB 1 HEADER</a></li>
-  <li><a data-toggle="tab" data-target="#tab2">TAB 2 HEADER</a></li>
+    <li class="active"><a data-toggle="tab" data-target="#tab1">TAB 1 HEADER</a></li>
+    <li><a data-toggle="tab" data-target="#tab2">TAB 2 HEADER</a></li>
 </ul>
 <div class="tab-content">
-  <div id="tab1" class="tab-pane fade in active">TAB 1 CONTENT</div>
-  <div id="tab2" class="tab-pane fade">TAB 2 CONTENT</div>
+    <div id="tab1" class="tab-pane fade in active">TAB 1 CONTENT</div>
+    <div id="tab2" class="tab-pane fade">TAB 2 CONTENT</div>
 </div>
 ```
 
@@ -249,7 +287,8 @@ no_ratings: true
 
 如果你需要在页面中运行自定义的 Javascript 脚本，这个是需要基于 JQuery 和 Bootstrap 来进行运行的。
 
-请确定 `<script>` 标记存储在页面的最后（在所有页面都被载入完成以后）。这是因为，如果你的脚本在页面之前的话，很有肯能导致你的页面在 JQuery 和 Bootstrap JS 载入完成之前运行，这会导致脚本错误。
+请确定 `<script>` 标记存储在页面的最后（在所有页面都被载入完成以后）。这是因为，如果你的脚本在页面之前的话，很有肯能导致你的页面在
+JQuery 和 Bootstrap JS 载入完成之前运行，这会导致脚本错误。
 
 > **Note**: 通常来说这个是一个糟糕的决定。
 
@@ -257,13 +296,16 @@ no_ratings: true
 
 不要忘记删除所有不需要的图片，将图片保存在 images/ 目录中，这个目录为通常我们保存图片的路径。
 
-通常的，这个文件夹中的图片文件是按照图片文件名的字母进行排和分组的。例如，相对命名方式来说 `settings-file-share.png` 和 `settings-proxies.png` 针对  `file-share-settings.png` 和 `proxies-settings.png` 来说就更好了。
+通常的，这个文件夹中的图片文件是按照图片文件名的字母进行排和分组的。例如，相对命名方式来说 `settings-file-share.png`
+和 `settings-proxies.png` 针对`file-share-settings.png` 和 `proxies-settings.png` 来说就更好了。
 
-你还可以添加数字，尤其你是针对图片有使用和显示顺序的情况下。例如，`run-only-the-images-you-trust-1.svg`，`run-only-the-images-you-trust-2.png`， `run-only-the-images-you-trust-3.png` 等。
+你还可以添加数字，尤其你是针对图片有使用和显示顺序的情况下。例如，`run-only-the-images-you-trust-1.svg`，`run-only-the-images-you-trust-2.png`， `run-only-the-images-you-trust-3.png`
+等。
 
 在可能的情况下，对需要的内容进行截图，并且避免对整个桌面进行截图，这样避免一些重要的配置信息被泄漏也能够为编辑节约不少的编辑时间。
 
-在 Mac 的计算机中，请对创建进行截图而且不要保存为阴影。你可以使用下面的方法进行操作：当你按下 `Command-Shift-4` 后，单击选项，来进行禁用 。
+在 Mac 的计算机中，请对创建进行截图而且不要保存为阴影。你可以使用下面的方法进行操作：当你按下 `Command-Shift-4`
+后，单击选项，来进行禁用 。
 
 如果你想全局进行禁用，请运行下面的脚本：
 
@@ -280,8 +322,8 @@ $ killall SystemUIServer  # restart it.
 
 ## 版权和许可证
 
-Copyright 2013-2020 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
+Copyright 2013-2024 Docker, inc, 文件的发布是基于 Apache 2.0 license 下进行发布。
 
 中文版本的翻译和维护由 CWIKIUS 进行。我们允许在非商业的情况下自由扩散分发，并保留适当的权利。您可以对我们的作品进行演绎，但需要保留版权信息和来源。
 
-本中文版本请参考：https://docker.ossez.com/ 页面中的编译部署内容和 https://docker-docs.ossez.com/ 基于 MD 的编译版本。
+本中文版本请参考：https://docker.isharkfly.com/ 页面中的编译部署内容和 https://docker-docs.ishafkfly.com/ 基于 MD 的编译版本。
