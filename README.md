@@ -56,6 +56,7 @@ GitHub 上有关 iSharkFly Docker
 | Docker 官方文档              | https://docs.docker.com/                     |
 | chinese_docker           | https://github.com/widuu/chinese_docker      |
 | daocloud.io              | https://guide.daocloud.io/#all-updates       |
+| Docker — 从入门到实践          | https://yeasy.gitbook.io/docker_practice     |
 
 欢迎来到 Docker 文档的代码仓库。本代码仓库是文档 https://docs.docker.com 的源代码。
 
