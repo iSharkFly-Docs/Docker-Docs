@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新 busybox 文章">
-      <change beforePath="$PROJECT_DIR$/in-action/os-image/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/in-action/os-image/_sidebar.md" afterDir="false" />
+    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新文章链接">
+      <change beforePath="$PROJECT_DIR$/in-action/os-image/busybox.md" beforeDir="false" afterPath="$PROJECT_DIR$/in-action/os-image/busybox.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715448815955</updated>
-      <workItem from="1715448817039" duration="5625000" />
+      <workItem from="1715448817039" duration="5739000" />
     </task>
     <task id="LOCAL-00001" summary="对项目进行重新规范化，使用域名：docker-docs.isharkfly.com 提供服务">
       <option name="closed" value="true" />
@@ -146,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715530355651</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="更新文章链接">
+      <option name="closed" value="true" />
+      <created>1715530393746</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715530393746</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +170,7 @@
     <MESSAGE value="更新 Docker — 从入门到实践 的链接" />
     <MESSAGE value="更新操作系统镜像部分的链接" />
     <MESSAGE value="更新 busybox 文章" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新 busybox 文章" />
+    <MESSAGE value="更新文章链接" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新文章链接" />
   </component>
 </project>
