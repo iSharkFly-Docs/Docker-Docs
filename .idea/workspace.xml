@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新联系方式">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新 Docker — 从入门到实践 的链接">
+      <change afterPath="$PROJECT_DIR$/in-action/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in-action/os-image/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in-action/os-image/_sidebar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in-action/os-image/alpine.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_sidebar.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/WorkDir/Repository/iSharkfly-Docs/Docker-Docs/in-action/os-image",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,6 +48,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkDir\Repository\iSharkfly-Docs\Docker-Docs\in-action\os-image" />
+      <recent name="D:\WorkDir\Repository\iSharkfly-Docs\Docker-Docs\in-action" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -57,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715448815955</updated>
-      <workItem from="1715448817039" duration="3598000" />
+      <workItem from="1715448817039" duration="4915000" />
     </task>
     <task id="LOCAL-00001" summary="对项目进行重新规范化，使用域名：docker-docs.isharkfly.com 提供服务">
       <option name="closed" value="true" />
@@ -115,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715451876766</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="更新 Docker — 从入门到实践 的链接">
+      <option name="closed" value="true" />
+      <created>1715461019786</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715461019786</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +148,7 @@
     <MESSAGE value="更新文档名" />
     <MESSAGE value="对文档说明进行处理" />
     <MESSAGE value="更新联系方式" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新联系方式" />
+    <MESSAGE value="更新 Docker — 从入门到实践 的链接" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新 Docker — 从入门到实践 的链接" />
   </component>
 </project>
