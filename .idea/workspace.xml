@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新 Docker — 从入门到实践 的链接">
-      <change afterPath="$PROJECT_DIR$/in-action/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in-action/os-image/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in-action/os-image/_sidebar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in-action/os-image/alpine.md" afterDir="false" />
+    <list default="true" id="6feae4b4-04c8-43aa-ae29-e763a7d96450" name="Changes" comment="更新操作系统镜像部分的链接">
+      <change afterPath="$PROJECT_DIR$/in-action/os-image/busybox.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_sidebar.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715448815955</updated>
-      <workItem from="1715448817039" duration="4915000" />
+      <workItem from="1715448817039" duration="5586000" />
     </task>
     <task id="LOCAL-00001" summary="对项目进行重新规范化，使用域名：docker-docs.isharkfly.com 提供服务">
       <option name="closed" value="true" />
@@ -135,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715461019786</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="更新操作系统镜像部分的链接">
+      <option name="closed" value="true" />
+      <created>1715525713916</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525713916</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +153,7 @@
     <MESSAGE value="对文档说明进行处理" />
     <MESSAGE value="更新联系方式" />
     <MESSAGE value="更新 Docker — 从入门到实践 的链接" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新 Docker — 从入门到实践 的链接" />
+    <MESSAGE value="更新操作系统镜像部分的链接" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新操作系统镜像部分的链接" />
   </component>
 </project>
