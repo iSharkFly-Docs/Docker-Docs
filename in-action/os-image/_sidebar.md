@@ -1,5 +1,5 @@
 - [Alpine](/in-action/os-image/alpine.md)
-- [String Methods](/week-4/methods_string.md)
+- [BusyBox](/in-action/os-image/busybox.md)
 - [Inheritance](/week-4/inheritance.md)
 - [Encapsulation](/week-4/encapsulation.md)
 - [Super and Sub Classes](/week-4/keyword_super.md)
